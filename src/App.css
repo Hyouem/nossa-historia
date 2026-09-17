@@ -569,3 +569,377 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+
+/* =========================================================
+   CAPÍTULO 01 — 13.11.2024
+   ========================================================= */
+
+.chapter-one {
+  min-height: auto;
+  display: block;
+  position: relative;
+  padding:
+    clamp(7rem, 12vw, 11rem)
+    max(1.2rem, calc((100vw - 1180px) / 2))
+    0;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(129, 21, 36, 0.13),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(213, 44, 63, 0.06),
+      transparent 20%
+    ),
+    var(--bg-soft);
+}
+
+.chapter-one__chapter {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 6rem;
+  color: rgba(233, 223, 212, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.55rem;
+}
+
+.chapter-one__chapter strong {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--red);
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.chapter-one__heading {
+  max-width: 850px;
+}
+
+.chapter-one__heading h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.065em;
+}
+
+.chapter-one__heading h2 span {
+  display: block;
+  color: var(--red);
+  font-style: italic;
+}
+
+.chapter-one__lead {
+  max-width: 520px;
+  margin: 2.5rem 0 0 auto;
+  color: rgba(233, 223, 212, 0.48);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.night {
+  position: relative;
+  margin-top: 9rem;
+  padding-bottom: 7rem;
+}
+
+.night__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(213, 44, 63, 0.6) 8%,
+    rgba(213, 44, 63, 0.15) 92%,
+    transparent
+  );
+}
+
+.night__moment {
+  position: relative;
+  width: 50%;
+  min-height: 320px;
+  padding: 3rem clamp(2rem, 5vw, 5rem);
+}
+
+.night__moment::before {
+  content: '';
+  position: absolute;
+  top: 4rem;
+  width: 9px;
+  height: 9px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  background: var(--bg-soft);
+  box-shadow: 0 0 0 8px rgba(213, 44, 63, 0.06);
+}
+
+.night__moment--left {
+  margin-right: auto;
+  text-align: right;
+}
+
+.night__moment--left::before {
+  right: -6px;
+}
+
+.night__moment--right {
+  margin-left: auto;
+}
+
+.night__moment--right::before {
+  left: -5px;
+}
+
+.night__number {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(213, 44, 63, 0.1);
+}
+
+.night__moment small {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.55rem;
+}
+
+.night__moment h3 {
+  margin: 0 0 1.3rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.night__moment p {
+  max-width: 420px;
+  margin: 0 0 1rem;
+  color: rgba(233, 223, 212, 0.55);
+  line-height: 1.8;
+}
+
+.night__moment--left p {
+  margin-left: auto;
+}
+
+.night__moment strong {
+  color: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15em;
+  font-style: italic;
+}
+
+.night__note {
+  position: absolute;
+  right: 3rem;
+  bottom: 2rem;
+  color: var(--red);
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  font-size: 0.75rem;
+  transform: rotate(-4deg);
+}
+
+.night__note--k {
+  right: 2rem;
+  transform: rotate(3deg);
+}
+
+.night__heart {
+  position: absolute;
+  left: 4rem;
+  bottom: 3rem;
+  color: var(--red);
+  font-size: 1.8rem;
+  transform: rotate(-12deg);
+}
+
+.certainty {
+  position: relative;
+  margin: 4rem auto 0;
+  max-width: 1000px;
+  padding: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid rgba(233, 223, 212, 0.1);
+  border-bottom: 1px solid rgba(233, 223, 212, 0.1);
+  text-align: center;
+}
+
+.certainty > p {
+  margin: 0 0 2rem;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.58rem;
+}
+
+.certainty blockquote {
+  margin: 0 auto;
+  max-width: 900px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 5vw, 5.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.certainty blockquote em {
+  display: block;
+  margin-top: 0.12em;
+  color: var(--red);
+  font-weight: 400;
+}
+
+.certainty__date {
+  margin: 4rem auto 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.certainty__date > span {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  color: var(--paper);
+}
+
+.certainty__date div {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.certainty__date strong {
+  color: var(--red);
+  font-size: 0.65rem;
+}
+
+.certainty__date small {
+  margin-top: 0.3rem;
+  color: rgba(233, 223, 212, 0.35);
+}
+
+.next-chapter {
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.next-chapter span {
+  color: rgba(233, 223, 212, 0.3);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.next-chapter strong {
+  margin-top: 1rem;
+  color: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.next-chapter small {
+  margin-top: 1.5rem;
+  color: var(--red);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .chapter-one {
+    padding-top: 7rem;
+  }
+
+  .chapter-one__chapter {
+    margin-bottom: 4rem;
+  }
+
+  .chapter-one__lead {
+    margin-left: 0;
+  }
+
+  .night {
+    margin-top: 6rem;
+    padding-left: 1.2rem;
+  }
+
+  .night__line {
+    left: 0;
+  }
+
+  .night__moment,
+  .night__moment--left,
+  .night__moment--right {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 2.5rem 0 5rem 2rem;
+    text-align: left;
+  }
+
+  .night__moment::before,
+  .night__moment--left::before,
+  .night__moment--right::before {
+    top: 3rem;
+    left: -5px;
+    right: auto;
+  }
+
+  .night__moment--left p {
+    margin-left: 0;
+  }
+
+  .night__number {
+    font-size: 3rem;
+  }
+
+  .night__note,
+  .night__note--k {
+    position: static;
+    display: block;
+    margin-top: 1.5rem;
+    transform: rotate(-2deg);
+  }
+
+  .night__heart {
+    position: static;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .certainty {
+    padding: 5rem 0;
+  }
+
+  .certainty__date {
+    margin-top: 3rem;
+  }
+
+  .next-chapter {
+    min-height: 40vh;
+  }
+}

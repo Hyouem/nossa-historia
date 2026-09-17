@@ -78,49 +78,125 @@ function App() {
         </div>
       </section>
 
-      <section id="inicio" className="beginning">
-        <div className="beginning__rail">
-          <span>01</span>
-          <div />
-          <small>13.11.24</small>
+      <section id="inicio" className="beginning chapter-one">
+        <div className="chapter-one__chapter">
+          <span>capítulo</span>
+          <strong>01</strong>
         </div>
 
-        <div className="beginning__story">
-          <p className="section-label">O começo</p>
+        <header className="chapter-one__heading">
+          <p className="section-label">13 de novembro de 2024</p>
 
           <h2>
-            Tudo por causa
-            <span>de um café.</span>
+            A noite em que
+            <span>tudo começou.</span>
           </h2>
 
-          <div className="beginning__text">
-            <p>
-              A gente se conheceu na internet. Eu mandei algumas cantadas
-              de Harry Potter e, de algum jeito, isso funcionou.
-            </p>
+          <p className="chapter-one__lead">
+            Naquela noite a gente ainda não fazia ideia do tamanho
+            que aquilo ia tomar.
+          </p>
+        </header>
 
-            <p>
-              Então veio o café. Você me contou que gostava de um anime
-              chamado <strong>K</strong>. E, por algum acaso absurdo,
-              eu também gostava.
-            </p>
+        <div className="night">
+          <div className="night__line" />
 
-            <p>
-              A gente conversou a noite toda. Você ganhou um beijinho na
-              testa e ainda fechamos a Andradas.
-            </p>
-          </div>
+          <article className="night__moment night__moment--left">
+            <span className="night__number">01</span>
+
+            <div>
+              <small>antes do café</small>
+              <h3>Harry Potter.</h3>
+
+              <p>
+                A gente se conheceu pela internet. E eu, aparentemente
+                cheio de confiança, resolvi começar com algumas cantadas
+                de Harry Potter.
+              </p>
+            </div>
+
+            <span className="night__note">
+              e não é que funcionou? ↗
+            </span>
+          </article>
+
+          <article className="night__moment night__moment--right">
+            <span className="night__number">02</span>
+
+            <div>
+              <small>depois</small>
+              <h3>Um café.</h3>
+
+              <p>
+                O que era para ser só um primeiro encontro virou uma
+                conversa que simplesmente não queria acabar.
+              </p>
+            </div>
+          </article>
+
+          <article className="night__moment night__moment--left">
+            <span className="night__number">03</span>
+
+            <div>
+              <small>em algum momento da conversa</small>
+              <h3>“Tu conhece K?”</h3>
+
+              <p>
+                Você me contou que gostava de um anime chamado
+                <strong> K</strong>.
+              </p>
+
+              <p>
+                De todos os animes do mundo, por algum acaso absurdo,
+                eu também conhecia.
+              </p>
+            </div>
+
+            <span className="night__note night__note--k">
+              qual era a chance disso?
+            </span>
+          </article>
+
+          <article className="night__moment night__moment--right">
+            <span className="night__number">04</span>
+
+            <div>
+              <small>quando já era tarde</small>
+              <h3>Fechamos a Andradas.</h3>
+
+              <p>
+                A conversa foi longe. Muito longe. E antes daquela
+                noite terminar, você ainda ganhou um beijinho na testa.
+              </p>
+            </div>
+
+            <span className="night__heart">♥</span>
+          </article>
         </div>
 
-        <aside className="beginning__memory">
-          <span>na minha cabeça naquela noite:</span>
+        <section className="certainty">
+          <p>e foi aí que eu percebi</p>
 
           <blockquote>
-            Daquela noite em diante eu soube que não queria mais ninguém.
+            Daquela noite em diante eu soube que
+            <em>não queria mais ninguém.</em>
           </blockquote>
 
-          <div className="beginning__heart">♥</div>
-        </aside>
+          <div className="certainty__date">
+            <span>13</span>
+
+            <div>
+              <strong>novembro</strong>
+              <small>2024</small>
+            </div>
+          </div>
+        </section>
+
+        <footer className="next-chapter">
+          <span>mas ainda faltava uma coisa...</span>
+          <strong>21.02.2025</strong>
+          <small>↓</small>
+        </footer>
       </section>
     </main>
   )
