@@ -4994,3 +4994,1151 @@ button {
       1.5rem !important;
   }
 }
+
+/* =========================================================
+   CAPÍTULO 06 — ATÉ O NOSSO DIA
+   ========================================================= */
+
+.wedding {
+  --wedding-paper: #eee4d8;
+  --wedding-red: #d72d42;
+  --wedding-deep-red: #7d1723;
+  --wedding-bg: #0a0708;
+
+  position: relative;
+  overflow: hidden;
+  padding:
+    11rem
+    max(1.5rem, calc((100vw - 1180px) / 2))
+    0;
+
+  color: var(--wedding-paper);
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(143, 23, 40, 0.16),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(143, 23, 40, 0.1),
+      transparent 26%
+    ),
+    var(--wedding-bg);
+}
+
+.wedding__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(238, 228, 216, 0.28) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(238, 228, 216, 0.28) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+}
+
+
+/* ---------- ABERTURA ---------- */
+
+.wedding__intro {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: clamp(3rem, 8vw, 9rem);
+  align-items: start;
+}
+
+.wedding__chapter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 1.5rem;
+}
+
+.wedding__chapter span {
+  color: var(--wedding-red);
+  font-size: 0.68rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.wedding__chapter strong {
+  margin-top: 0.6rem;
+
+  color: rgba(215, 45, 66, 0.13);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(5rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+.wedding__intro-copy > span {
+  color: rgba(238, 228, 216, 0.38);
+  font-size: 0.76rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.wedding__intro-copy h2 {
+  max-width: 900px;
+  margin: 1.4rem 0 0;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 7vw, 7.8rem);
+  font-weight: 400;
+  line-height: 0.84;
+  letter-spacing: -0.065em;
+}
+
+.wedding__intro-copy h2 em {
+  display: block;
+
+  color: var(--wedding-red);
+
+  font-weight: 400;
+}
+
+.wedding__intro-copy p {
+  max-width: 520px;
+  margin: 3rem 0 0;
+
+  color: rgba(238, 228, 216, 0.48);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+
+/* ---------- POLAROID QUE AINDA NÃO EXISTE ---------- */
+
+.wedding__blank-memory {
+  position: relative;
+  z-index: 2;
+
+  width: min(58vw, 640px);
+  margin: 13rem 0 0 8%;
+  padding:
+    0.8rem
+    0.8rem
+    5.2rem;
+
+  background: var(--wedding-paper);
+
+  box-shadow:
+    0 55px 140px rgba(0, 0, 0, 0.52);
+
+  transform: rotate(-3deg);
+}
+
+.wedding__blank-photo {
+  display: grid;
+  place-items: center;
+
+  height: 620px;
+
+  border: 1px dashed rgba(50, 38, 40, 0.25);
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(125, 23, 35, 0.08),
+      transparent 38%
+    ),
+    #151011;
+}
+
+.wedding__blank-photo span {
+  color: rgba(238, 228, 216, 0.16);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 10rem;
+  font-style: italic;
+}
+
+.wedding__blank-caption {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 1.3rem;
+  left: 1.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #241b1d;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.wedding__blank-caption strong {
+  color: var(--wedding-deep-red);
+}
+
+.wedding__blank-memory > p {
+  position: absolute;
+  right: -8rem;
+  top: 46%;
+
+  margin: 0;
+
+  color: var(--wedding-red);
+
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  font-size: 1rem;
+
+  transform: rotate(7deg);
+}
+
+
+/* ---------- A DATA ---------- */
+
+.wedding__date {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 15rem;
+  text-align: center;
+}
+
+.wedding__date > span {
+  color: rgba(238, 228, 216, 0.34);
+
+  font-size: 0.72rem;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+}
+
+.wedding__date h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.6rem, 2vw, 2rem);
+
+  margin: 2rem 0 0;
+
+  color: var(--wedding-paper);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4.8rem, 10vw, 10.5rem);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+}
+
+.wedding__date h3 i {
+  color: var(--wedding-red);
+  font-weight: 400;
+}
+
+.wedding__date p {
+  margin: 3rem auto 0;
+
+  color: rgba(238, 228, 216, 0.42);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.wedding__date p strong {
+  display: block;
+
+  color: var(--wedding-paper);
+  font-weight: 400;
+}
+
+
+/* ---------- CONTADOR ---------- */
+
+.wedding__countdown {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: min(100%, 900px);
+  min-height: 540px;
+
+  margin: 9rem auto 0;
+  padding: 5rem 0;
+
+  border-top:
+    1px solid rgba(215, 45, 66, 0.22);
+
+  border-bottom:
+    1px solid rgba(215, 45, 66, 0.22);
+}
+
+.wedding__countdown-eyebrow {
+  margin-bottom: 3.5rem;
+
+  color: rgba(238, 228, 216, 0.35);
+
+  font-size: 0.74rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+.wedding__countdown-values {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  width: 100%;
+}
+
+.wedding__countdown-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+
+  padding: 0 1rem;
+}
+
+.wedding__countdown-item:not(:last-child)::after {
+  content: '';
+
+  position: absolute;
+  top: 12%;
+  right: 0;
+  bottom: 12%;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(215, 45, 66, 0.32),
+      transparent
+    );
+}
+
+.wedding__countdown .wedding__countdown-value {
+  color: var(--wedding-red);
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size:
+    clamp(5rem, 10vw, 8.5rem);
+
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.075em;
+}
+
+.wedding__countdown .wedding__countdown-label {
+  margin-top: 1.5rem;
+
+  color: var(--wedding-paper);
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size:
+    clamp(1.4rem, 2.5vw, 2.3rem);
+
+  font-style: italic;
+  line-height: 1;
+}
+
+
+/* contador em telas menores */
+
+@media (max-width: 760px) {
+
+  .wedding__countdown {
+    min-height: 390px;
+    padding: 4rem 0;
+  }
+
+  .wedding__countdown-eyebrow {
+    margin-bottom: 2.5rem;
+  }
+
+  .wedding__countdown-item {
+    padding: 0 0.35rem;
+  }
+
+  .wedding__countdown .wedding__countdown-value {
+    font-size:
+      clamp(2.8rem, 16vw, 5rem);
+  }
+
+  .wedding__countdown .wedding__countdown-label {
+    margin-top: 1rem;
+
+    font-size:
+      clamp(0.9rem, 4vw, 1.4rem);
+  }
+}
+
+/* ---------- FECHAMENTO ---------- */
+
+.wedding__promise {
+  position: relative;
+  z-index: 2;
+
+  min-height: 110vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12rem 0;
+
+  text-align: center;
+}
+
+.wedding__promise > span {
+  color: var(--wedding-red);
+
+  font-size: 0.72rem;
+  letter-spacing: 0.36em;
+}
+
+.wedding__promise h3 {
+  max-width: 980px;
+  margin: 2rem 0 0;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 7vw, 7.6rem);
+  font-weight: 400;
+  line-height: 0.87;
+  letter-spacing: -0.055em;
+}
+
+.wedding__promise h3 em {
+  display: block;
+
+  color: var(--wedding-red);
+  font-weight: 400;
+}
+
+.wedding__promise p {
+  max-width: 600px;
+  margin: 3rem auto 0;
+
+  color: rgba(238, 228, 216, 0.48);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.wedding__promise-line {
+  width: 1px;
+  height: 90px;
+  margin: 4rem 0 1.5rem;
+
+  background:
+    linear-gradient(
+      var(--wedding-red),
+      transparent
+    );
+}
+
+.wedding__promise > strong {
+  color: rgba(238, 228, 216, 0.34);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .wedding {
+    padding:
+      8rem
+      1.4rem
+      0;
+  }
+
+  .wedding__intro {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .wedding__chapter {
+    align-items: flex-start;
+  }
+
+  .wedding__intro-copy h2 {
+    font-size: clamp(3.8rem, 17vw, 6rem);
+  }
+
+  .wedding__blank-memory {
+    width: 88%;
+    margin:
+      9rem
+      auto
+      0;
+  }
+
+  .wedding__blank-photo {
+    height: 460px;
+  }
+
+  .wedding__blank-memory > p {
+    right: -1rem;
+    top: auto;
+    bottom: -3rem;
+  }
+
+  .wedding__date {
+    margin-top: 11rem;
+  }
+
+  .wedding__date h3 {
+    flex-wrap: wrap;
+
+    font-size:
+      clamp(4rem, 19vw, 7rem);
+  }
+
+  .wedding__countdown {
+    min-height: 430px;
+    margin-top: 7rem;
+  }
+
+  .wedding__countdown strong {
+    font-size:
+      clamp(9rem, 43vw, 14rem);
+  }
+
+  .wedding__promise {
+    min-height: 95vh;
+    padding: 9rem 0;
+  }
+
+  .wedding__promise h3 {
+    font-size:
+      clamp(3.8rem, 16vw, 6rem);
+  }
+}
+
+/* =========================================================
+   ETAPA 08 — O QUE AINDA VEM
+   ========================================================= */
+
+.future {
+  --future-paper: #eee4d8;
+  --future-red: #d72d42;
+  --future-dark-red: #781523;
+  --future-bg: #080607;
+
+  position: relative;
+  overflow: hidden;
+
+  padding:
+    13rem
+    max(1.5rem, calc((100vw - 1180px) / 2))
+    0;
+
+  color: var(--future-paper);
+
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(159, 30, 45, 0.13),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #0a0708,
+      #080607 55%,
+      #050405
+    );
+}
+
+
+/* ---------- PALAVRA DE FUNDO ---------- */
+
+.future__ghost-word {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+
+  color: rgba(215, 45, 66, 0.045);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(10rem, 30vw, 30rem);
+  font-style: italic;
+  line-height: 0.7;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* ---------- INTRO ---------- */
+
+.future__intro {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1000px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.future__intro > span {
+  color: var(--future-red);
+
+  font-size: 0.7rem;
+  letter-spacing: 0.48em;
+  text-transform: uppercase;
+}
+
+.future__intro > p {
+  margin: 1.2rem 0 0;
+
+  color: rgba(238, 228, 216, 0.35);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.future__intro h2 {
+  margin: 4rem 0 0;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4.5rem, 8vw, 8.5rem);
+  font-weight: 400;
+  line-height: 0.83;
+  letter-spacing: -0.065em;
+}
+
+.future__intro h2 em {
+  display: block;
+
+  color: var(--future-red);
+  font-weight: 400;
+}
+
+
+/* ---------- MANIFESTO ---------- */
+
+.future__manifesto {
+  position: relative;
+  z-index: 2;
+
+  max-width: 680px;
+  margin: 15rem auto 0;
+
+  text-align: center;
+
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.future__manifesto p {
+  margin: 0;
+
+  color: rgba(238, 228, 216, 0.5);
+
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: 1.55;
+}
+
+.future__manifesto strong {
+  display: block;
+
+  margin: 2rem 0;
+
+  color: var(--future-red);
+
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+
+/* ---------- FUTURO EM LINHA ---------- */
+
+.future__line {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1050px;
+  margin: 16rem auto 0;
+}
+
+.future__line::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 52px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(215, 45, 66, 0.55) 8%,
+      rgba(215, 45, 66, 0.25) 88%,
+      transparent
+    );
+}
+
+.future-point {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 6rem);
+
+  min-height: 430px;
+}
+
+.future-point > span {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+
+  width: 105px;
+  height: 105px;
+
+  border: 1px solid rgba(215, 45, 66, 0.4);
+  border-radius: 50%;
+
+  color: var(--future-red);
+
+  background: var(--future-bg);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.4rem;
+}
+
+.future-point > div {
+  max-width: 680px;
+  padding-top: 1rem;
+}
+
+.future-point small {
+  color: rgba(238, 228, 216, 0.28);
+
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.future-point h3 {
+  margin: 1rem 0 0;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3rem, 5vw, 5.6rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+}
+
+.future-point h3 em {
+  display: block;
+
+  color: var(--future-red);
+
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+.future-point p {
+  max-width: 520px;
+  margin: 2rem 0 0;
+
+  color: rgba(238, 228, 216, 0.42);
+
+  line-height: 1.8;
+}
+
+.future-point--home {
+  margin-left: 9%;
+}
+
+.future-point--bacurinha {
+  margin-left: 2%;
+}
+
+
+/* ---------- COISAS QUE AINDA NÃO SABEMOS ---------- */
+
+.future__unknown {
+  position: relative;
+  z-index: 2;
+
+  max-width: 880px;
+  margin: 10rem auto 0;
+  padding: 9rem 0;
+
+  border-top: 1px solid rgba(238, 228, 216, 0.08);
+  border-bottom: 1px solid rgba(238, 228, 216, 0.08);
+
+  text-align: center;
+}
+
+.future__unknown > span {
+  color: var(--future-red);
+
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  font-size: 0.95rem;
+
+  transform: rotate(-2deg);
+}
+
+.future__unknown h3 {
+  margin: 2.5rem 0 0;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3.4rem, 6vw, 6.3rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.future__unknown h3 em {
+  display: block;
+
+  color: var(--future-red);
+  font-weight: 400;
+}
+
+.future__unknown p {
+  max-width: 610px;
+  margin: 3rem auto 0;
+
+  color: rgba(238, 228, 216, 0.43);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.08rem;
+  line-height: 2;
+}
+
+
+/* ---------- CALLBACK DO COMEÇO ---------- */
+
+.future__callback {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 16rem;
+
+  text-align: center;
+}
+
+.future__callback > span {
+  color: rgba(238, 228, 216, 0.28);
+
+  font-size: 0.68rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.future__callback-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  margin-top: 3rem;
+}
+
+.future__callback-items strong {
+  color: var(--future-paper);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.future__callback-items i {
+  color: var(--future-red);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  font-style: normal;
+}
+
+.future__callback > p {
+  margin: 2.5rem 0 0;
+
+  color: var(--future-red);
+
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  font-size: 1rem;
+
+  transform: rotate(-1deg);
+}
+
+
+/* ---------- FINAL ---------- */
+
+.future__final {
+  position: relative;
+  z-index: 2;
+
+  min-height: 120vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin:
+    10rem
+    calc(-1 * max(1.5rem, calc((100vw - 1180px) / 2)))
+    0;
+
+  padding:
+    12rem
+    max(1.5rem, calc((100vw - 1180px) / 2));
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(157, 28, 43, 0.2),
+      transparent 33%
+    ),
+    #050405;
+}
+
+.future__final > span {
+  color: rgba(238, 228, 216, 0.28);
+
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+}
+
+.future__final h3 {
+  max-width: 1050px;
+  margin: 3rem 0 0;
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 7vw, 7.5rem);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+}
+
+.future__final h3 em {
+  display: block;
+
+  margin-top: 0.15em;
+
+  color: var(--future-red);
+  font-weight: 400;
+}
+
+.future__final p {
+  max-width: 600px;
+  margin: 4rem auto 0;
+
+  color: rgba(238, 228, 216, 0.46);
+
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.future__final p strong {
+  display: block;
+
+  margin-top: 0.5rem;
+
+  color: var(--future-paper);
+
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.future__heart {
+  margin-top: 5rem;
+
+  color: var(--future-red);
+
+  font-size: 4rem;
+
+  animation:
+    future-heartbeat
+    2.1s
+    ease-in-out
+    infinite;
+}
+
+.future__final small {
+  margin-top: 2rem;
+
+  color: rgba(238, 228, 216, 0.24);
+
+  font-size: 0.68rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+}
+
+@keyframes future-heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  12% {
+    transform: scale(1.14);
+  }
+
+  23% {
+    transform: scale(1);
+  }
+
+  34% {
+    transform: scale(1.08);
+  }
+
+  48% {
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .future {
+    padding:
+      9rem
+      1.4rem
+      0;
+  }
+
+  .future__intro h2 {
+    font-size:
+      clamp(3.8rem, 17vw, 6.2rem);
+  }
+
+  .future__manifesto {
+    margin-top: 10rem;
+  }
+
+  .future__line {
+    margin-top: 11rem;
+  }
+
+  .future__line::before {
+    left: 30px;
+  }
+
+  .future-point {
+    grid-template-columns:
+      60px
+      minmax(0, 1fr);
+
+    gap: 1.4rem;
+
+    min-height: 380px;
+  }
+
+  .future-point > span {
+    width: 60px;
+    height: 60px;
+
+    font-size: 0.85rem;
+  }
+
+  .future-point h3 {
+    font-size:
+      clamp(2.7rem, 11vw, 4.5rem);
+  }
+
+  .future-point--home,
+  .future-point--bacurinha {
+    margin-left: 0;
+  }
+
+  .future__unknown {
+    margin-top: 6rem;
+    padding: 7rem 0;
+  }
+
+  .future__callback {
+    margin-top: 10rem;
+  }
+
+  .future__callback-items {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .future__callback-items i {
+    font-size: 1.2rem;
+  }
+
+  .future__final {
+    min-height: 105vh;
+
+    margin:
+      8rem
+      -1.4rem
+      0;
+
+    padding:
+      9rem
+      1.4rem;
+  }
+
+  .future__final h3 {
+    font-size:
+      clamp(3.6rem, 16vw, 6rem);
+  }
+}

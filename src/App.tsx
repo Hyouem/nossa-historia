@@ -1,5 +1,96 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import './App.css'
+
+const WEDDING_TARGET =
+  new Date('2026-11-21T00:00:00-03:00').getTime()
+
+function getWeddingCountdown() {
+  const remaining = Math.max(
+    0,
+    WEDDING_TARGET - Date.now(),
+  )
+
+  const days = Math.floor(
+    remaining / 86400000,
+  )
+
+  const hours = Math.floor(
+    (remaining % 86400000) / 3600000,
+  )
+
+  const minutes = Math.floor(
+    (remaining % 3600000) / 60000,
+  )
+
+  return {
+    days,
+    hours,
+    minutes,
+  }
+}
+
+function WeddingCountdown() {
+  const [remaining, setRemaining] =
+    useState(getWeddingCountdown)
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      setRemaining(getWeddingCountdown())
+    }
+
+    updateCountdown()
+
+    const interval =
+      window.setInterval(
+        updateCountdown,
+        1000,
+      )
+
+    return () => {
+      window.clearInterval(interval)
+    }
+  }, [])
+
+  return (
+    <div className="wedding__countdown">
+      <span className="wedding__countdown-eyebrow">
+        faltam
+      </span>
+
+      <div className="wedding__countdown-values">
+        <div className="wedding__countdown-item">
+          <strong className="wedding__countdown-value">
+            {String(remaining.days).padStart(2, '0')}
+          </strong>
+
+          <span className="wedding__countdown-label">
+            dias
+          </span>
+        </div>
+
+        <div className="wedding__countdown-item">
+          <strong className="wedding__countdown-value">
+            {String(remaining.hours).padStart(2, '0')}
+          </strong>
+
+          <span className="wedding__countdown-label">
+            horas
+          </span>
+        </div>
+
+        <div className="wedding__countdown-item">
+          <strong className="wedding__countdown-value">
+            {String(remaining.minutes).padStart(2, '0')}
+          </strong>
+
+          <span className="wedding__countdown-label">
+            minutos
+          </span>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function App() {
   const audioRef = useRef<HTMLAudioElement>(null)
@@ -1165,6 +1256,208 @@ function App() {
 
           <i>↓</i>
         </footer>
+      </section>
+
+      <section className="wedding">
+        <div className="wedding__grid" />
+
+        <header className="wedding__intro">
+          <div className="wedding__chapter">
+            <span>capítulo</span>
+            <strong>06</strong>
+          </div>
+
+          <div className="wedding__intro-copy">
+            <span>até aqui...</span>
+
+            <h2>
+              eu consegui
+              <em>colocar fotos.</em>
+            </h2>
+
+            <p>
+              Daqui pra frente,
+              algumas delas a gente ainda vai ter que tirar.
+            </p>
+          </div>
+        </header>
+
+        <div className="wedding__blank-memory">
+          <div className="wedding__blank-photo">
+            <span>?</span>
+          </div>
+
+          <div className="wedding__blank-caption">
+            <span>essa ainda falta.</span>
+            <strong>♥</strong>
+          </div>
+
+          <p>por enquanto.</p>
+        </div>
+
+        <div className="wedding__date">
+          <span>o nosso próximo grande dia</span>
+
+          <h3>
+            21
+            <i>·</i>
+            11
+            <i>·</i>
+            2026
+          </h3>
+
+          <p>
+            Não é uma lembrança ainda.
+            <strong>É uma contagem regressiva.</strong>
+          </p>
+        </div>
+
+        <WeddingCountdown />
+
+        <div className="wedding__promise">
+          <span>21 · 11 · 2026</span>
+
+          <h3>
+            A próxima foto importante
+            <em>ainda não existe.</em>
+          </h3>
+
+          <p>
+            E eu gosto disso.
+            Porque significa que ainda tem um monte da nossa história
+            esperando a gente chegar.
+          </p>
+
+          <div className="wedding__promise-line" />
+
+          <strong>continua ↓</strong>
+        </div>
+      </section>
+
+      <section className="future">
+        <div className="future__ghost-word">depois</div>
+
+        <header className="future__intro">
+          <span>epílogo</span>
+
+          <p>ou talvez só o começo de outra parte.</p>
+
+          <h2>
+            Depois do sim,
+            <em>vem o resto da vida.</em>
+          </h2>
+        </header>
+
+        <div className="future__manifesto">
+          <p>
+            Eu não sei exatamente como vão ser os próximos anos.
+          </p>
+
+          <strong>
+            Ainda bem.
+          </strong>
+
+          <p>
+            Quero descobrir eles com você.
+          </p>
+        </div>
+
+        <div className="future__line">
+          <div className="future-point future-point--places">
+            <span>01</span>
+
+            <div>
+              <small>ainda falta</small>
+              <h3>conhecer um monte de lugar.</h3>
+
+              <p>
+                E provavelmente reclamar de alguma coisa no caminho.
+              </p>
+            </div>
+          </div>
+
+          <div className="future-point future-point--home">
+            <span>02</span>
+
+            <div>
+              <small>ainda falta</small>
+              <h3>deixar a vida cada vez mais com cara de casa.</h3>
+
+              <p>
+                Nossa bagunça, nossas coisas,
+                domingos sem fazer nada e planos feitos do nada.
+              </p>
+            </div>
+          </div>
+
+          <div className="future-point future-point--bacurinha">
+            <span>03</span>
+
+            <div>
+              <small>e quem sabe um dia...</small>
+
+              <h3>
+                um
+                <em>Bacurinha.</em>
+              </h3>
+
+              <p>
+                Um ser humano pequeno descobrindo cedo demais
+                que os pais dele são dois nerds.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="future__unknown">
+          <span>o melhor é que...</span>
+
+          <h3>
+            ainda existem milhares de coisas
+            <em>que eu nem sei que vou lembrar.</em>
+          </h3>
+
+          <p>
+            Conversas que ainda não aconteceram.
+            Lugares que a gente ainda não conhece.
+            Piadas que ainda não inventamos.
+            Fotos que ainda não tiramos.
+          </p>
+        </div>
+
+        <div className="future__callback">
+          <span>e pensar que tudo começou com...</span>
+
+          <div className="future__callback-items">
+            <strong>uma cantada de Harry Potter</strong>
+            <i>+</i>
+            <strong>um café</strong>
+            <i>+</i>
+            <strong>uma conversa sobre K</strong>
+          </div>
+
+          <p>e uma noite que não queria terminar.</p>
+        </div>
+
+        <div className="future__final">
+          <span>13 · 11 · 2024 →</span>
+
+          <h3>
+            Se eu pudesse voltar sabendo
+            tudo que veio depois...
+            <em>eu mandaria aquela cantada de novo.</em>
+          </h3>
+
+          <p>
+            Porque no fim de tudo,
+            eu só quero continuar indo
+            <strong>com você.</strong>
+          </p>
+
+          <div className="future__heart">♥</div>
+
+          <small>Maurício + Brenda</small>
+        </div>
       </section>
     </main>
   )
