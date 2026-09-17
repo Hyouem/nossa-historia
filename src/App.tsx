@@ -378,6 +378,229 @@ function App() {
           <strong>↓</strong>
         </footer>
       </section>
+
+      <section className="life">
+        <div className="life__noise" />
+
+        <header className="life__intro">
+          <div className="life__chapter">
+            <span>capítulo</span>
+            <strong>03</strong>
+          </div>
+
+          <p className="section-label">depois que virou nós</p>
+
+          <h2>
+            A vida
+            <span>acontecendo.</span>
+          </h2>
+
+          <div className="life__intro-copy">
+            <p>
+              E aí veio a melhor parte:
+              não precisava acontecer nada extraordinário.
+            </p>
+
+            <strong>
+              Bastava acontecer com você.
+            </strong>
+          </div>
+        </header>
+
+        <div className="life__collage">
+          <figure className="life-photo life-photo--tradition">
+            <img
+              src="/images/03-vida-juntos/01-tradicao.jpg"
+              alt="Maurício e Brenda em trajes tradicionais gaúchos"
+            />
+
+            <figcaption>
+              <span>até nisso</span>
+              <strong>a gente combina.</strong>
+            </figcaption>
+          </figure>
+
+          <div className="life__tradition-copy">
+            <span>um pouco daqui.</span>
+            <span>um pouco dali.</span>
+            <strong>um monte de nós.</strong>
+          </div>
+
+          <figure className="life-photo life-photo--night">
+            <img
+              src="/images/03-vida-juntos/02-noite.jpg"
+              alt="Maurício e Brenda juntos durante a noite"
+            />
+          </figure>
+
+          <figure className="life-photo life-photo--role">
+            <img
+              src="/images/03-vida-juntos/03-role.jpg"
+              alt="Maurício e Brenda juntos em um rolê"
+            />
+
+            <figcaption>
+              <span>saindo por aí</span>
+              <strong>♥</strong>
+            </figcaption>
+          </figure>
+
+          <p className="life__scribble life__scribble--night">
+            aparentemente a gente gosta de sair de casa ↗
+          </p>
+        </div>
+
+        <section className="life__gym">
+          <div className="life__gym-title">
+            <span>inclusive...</span>
+
+            <h3>
+              Até sofrer
+              <em>junto.</em>
+            </h3>
+
+            <p>
+              Porque em algum momento a gente decidiu
+              que academia também era programa de casal.
+            </p>
+          </div>
+
+          <div className="life__gym-photos">
+            <figure className="life-photo life-photo--gym-one">
+              <img
+                src="/images/03-vida-juntos/04-treino.jpg"
+                alt="Maurício e Brenda juntos na academia"
+              />
+            </figure>
+
+            <figure className="life-photo life-photo--gym-two">
+              <img
+                src="/images/03-vida-juntos/10-treino-juntos.jpg"
+                alt="Maurício e Brenda depois de mais um treino juntos"
+              />
+            </figure>
+
+            <span className="life__gym-note">
+              casal que treina junto...
+              <small>reclama junto também.</small>
+            </span>
+          </div>
+        </section>
+
+        <section className="life__slow">
+          <figure className="life-photo life-photo--grass">
+            <img
+              src="/images/03-vida-juntos/05-grama.jpg"
+              alt="Maurício e Brenda descansando juntos na grama"
+            />
+          </figure>
+
+          <div className="life__slow-copy">
+            <span>mas calma.</span>
+
+            <h3>
+              A gente também
+              <em>não fazia nada.</em>
+            </h3>
+
+            <p>
+              E, estranhamente, esses momentos também
+              acabavam virando alguns dos meus favoritos.
+            </p>
+          </div>
+        </section>
+
+        <section className="life__home">
+          <header>
+            <span>entre uma coisa e outra</span>
+
+            <h3>
+              Foi ficando
+              <em>com cara de casa.</em>
+            </h3>
+          </header>
+
+          <div className="life__home-cards">
+            <figure className="life-photo life-photo--home">
+              <img
+                src="/images/03-vida-juntos/07-casa.jpg"
+                alt="Maurício e Brenda em um momento tranquilo juntos"
+              />
+
+              <figcaption>
+                <span>nós</span>
+                <strong>+ companhia.</strong>
+              </figcaption>
+            </figure>
+
+            <figure className="life-photo life-photo--pause">
+              <img
+                src="/images/03-vida-juntos/08-pausa.jpg"
+                alt="Um momento de pausa na vida de Maurício e Brenda"
+              />
+            </figure>
+
+            <figure className="life-photo life-photo--family">
+              <img
+                src="/images/03-vida-juntos/09-familia.jpg"
+                alt="Maurício, Brenda e o cachorro juntos"
+              />
+
+              <figcaption>
+                <span>olha a família aí</span>
+                <strong>♥</strong>
+              </figcaption>
+            </figure>
+          </div>
+
+          <p className="life__home-note">
+            eu gosto dessa nossa bagunça.
+          </p>
+        </section>
+
+        <section className="fireworks">
+          <div className="fireworks__prelude">
+            <span>pera aí...</span>
+
+            <p>
+              Lembra que lá no começo eu disse que
+              nossa história não começou com fogos?
+            </p>
+          </div>
+
+          <figure className="fireworks__photo">
+            <img
+              src="/images/03-vida-juntos/06-fogos.jpg"
+              alt="Maurício e Brenda se beijando enquanto fogos iluminam o céu"
+            />
+
+            <div className="fireworks__shade" />
+
+            <figcaption>
+              <span>tá.</span>
+
+              <strong>
+                Talvez tenha tido
+                <em>alguns fogos.</em>
+              </strong>
+            </figcaption>
+          </figure>
+
+          <div className="fireworks__after">
+            <span>a história não começou com eles.</span>
+            <strong>mas eles apareceram no caminho.</strong>
+            <i>♥</i>
+          </div>
+        </section>
+
+        <footer className="life__ending">
+          <span>e ainda tinha tanta coisa pra viver...</span>
+
+          <div />
+
+          <strong>↓</strong>
+        </footer>
+      </section>
     </main>
   )
 }

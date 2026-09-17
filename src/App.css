@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #100d0e;
   --bg-soft: #171213;
   --paper: #e9dfd4;
@@ -1613,5 +1613,763 @@ button {
 
   .together__ending {
     min-height: 50vh;
+  }
+}
+/* =========================================================
+   CAPÍTULO 03 — A VIDA ACONTECENDO
+   ========================================================= */
+
+.life {
+  position: relative;
+  overflow: hidden;
+  padding:
+    clamp(8rem, 13vw, 13rem)
+    max(1.2rem, calc((100vw - 1180px) / 2))
+    0;
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(213, 44, 63, 0.1),
+      transparent 19%
+    ),
+    radial-gradient(
+      circle at 88% 42%,
+      rgba(129, 21, 36, 0.1),
+      transparent 18%
+    ),
+    #120e0f;
+}
+
+.life__noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+  background-size: 54px 54px;
+}
+
+.life__intro {
+  position: relative;
+  z-index: 2;
+  max-width: 1050px;
+}
+
+.life__chapter {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 5rem;
+  color: rgba(233, 223, 212, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.55rem;
+}
+
+.life__chapter strong {
+  color: var(--red);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.life__intro h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(5rem, 10vw, 10rem);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.075em;
+}
+
+.life__intro h2 span {
+  display: block;
+  color: var(--red);
+  font-style: italic;
+}
+
+.life__intro-copy {
+  width: min(100%, 530px);
+  margin: 3.5rem 0 0 auto;
+}
+
+.life__intro-copy p {
+  margin: 0;
+  color: rgba(233, 223, 212, 0.48);
+  line-height: 1.8;
+}
+
+.life__intro-copy strong {
+  display: block;
+  margin-top: 1rem;
+  color: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.life__collage {
+  position: relative;
+  min-height: 1150px;
+  margin-top: 10rem;
+}
+
+.life-photo {
+  margin: 0;
+}
+
+.life-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.life-photo--tradition {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: min(41%, 480px);
+  padding: 0.65rem 0.65rem 4rem;
+  background: #ddd1c4;
+  transform: rotate(-3deg);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.4);
+}
+
+.life-photo--tradition img {
+  height: 600px;
+}
+
+.life-photo--tradition figcaption,
+.life-photo--role figcaption,
+.life-photo--home figcaption,
+.life-photo--family figcaption {
+  position: absolute;
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 1.05rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: #2c2424;
+}
+
+.life-photo--tradition figcaption span,
+.life-photo--role figcaption span,
+.life-photo--home figcaption span,
+.life-photo--family figcaption span {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.life-photo--tradition figcaption strong,
+.life-photo--role figcaption strong,
+.life-photo--home figcaption strong,
+.life-photo--family figcaption strong {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.55rem;
+}
+
+.life__tradition-copy {
+  position: absolute;
+  left: 47%;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 4.3rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.life__tradition-copy span {
+  color: var(--paper);
+}
+
+.life__tradition-copy strong {
+  margin-top: 0.15em;
+  color: var(--red);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.life-photo--night {
+  position: absolute;
+  right: 3%;
+  top: 280px;
+  width: min(31%, 360px);
+  transform: rotate(4deg);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.life-photo--night img {
+  height: 500px;
+}
+
+.life-photo--role {
+  position: absolute;
+  left: 39%;
+  bottom: 30px;
+  width: min(32%, 370px);
+  padding: 0.55rem 0.55rem 3.5rem;
+  background: #ddd1c4;
+  transform: rotate(1.5deg);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.4);
+}
+
+.life-photo--role img {
+  height: 490px;
+}
+
+.life__scribble {
+  color: var(--red);
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  font-size: 0.8rem;
+}
+
+.life__scribble--night {
+  position: absolute;
+  right: 1%;
+  bottom: 110px;
+  width: 220px;
+  transform: rotate(-5deg);
+}
+
+.life__gym {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: clamp(4rem, 9vw, 10rem);
+  align-items: center;
+  margin-top: 12rem;
+}
+
+.life__gym-title > span,
+.life__home header > span,
+.life__slow-copy > span {
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.58rem;
+}
+
+.life__gym-title h3,
+.life__slow-copy h3,
+.life__home h3 {
+  margin: 1rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.life__gym-title h3 em,
+.life__slow-copy h3 em,
+.life__home h3 em {
+  display: block;
+  color: var(--red);
+  font-weight: 400;
+}
+
+.life__gym-title p,
+.life__slow-copy p {
+  max-width: 380px;
+  margin-top: 2rem;
+  color: rgba(233, 223, 212, 0.45);
+  line-height: 1.8;
+}
+
+.life__gym-photos {
+  position: relative;
+  min-height: 720px;
+}
+
+.life-photo--gym-one,
+.life-photo--gym-two {
+  position: absolute;
+  width: min(60%, 390px);
+  padding: 0.5rem;
+  background: #ddd1c4;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.38);
+}
+
+.life-photo--gym-one {
+  left: 0;
+  top: 20px;
+  transform: rotate(-5deg);
+}
+
+.life-photo--gym-two {
+  right: 0;
+  top: 180px;
+  transform: rotate(5deg);
+}
+
+.life-photo--gym-one img,
+.life-photo--gym-two img {
+  height: 520px;
+}
+
+.life__gym-note {
+  position: absolute;
+  left: 2rem;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  color: var(--red);
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  transform: rotate(-3deg);
+}
+
+.life__gym-note small {
+  margin: 0.4rem 0 0 3rem;
+  color: rgba(233, 223, 212, 0.42);
+  font-family: inherit;
+}
+
+.life__slow {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: clamp(4rem, 9vw, 10rem);
+  align-items: center;
+  margin-top: 15rem;
+}
+
+.life-photo--grass {
+  width: 100%;
+  transform: rotate(-1.5deg);
+}
+
+.life-photo--grass img {
+  height: 680px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+}
+
+.life__home {
+  margin-top: 16rem;
+}
+
+.life__home header {
+  max-width: 780px;
+  margin: 0 auto 8rem;
+  text-align: center;
+}
+
+.life__home-cards {
+  position: relative;
+  min-height: 920px;
+}
+
+.life-photo--home,
+.life-photo--family {
+  position: absolute;
+  padding: 0.55rem 0.55rem 3.7rem;
+  background: #ddd1c4;
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.38);
+}
+
+.life-photo--home {
+  left: 2%;
+  top: 50px;
+  width: min(38%, 450px);
+  transform: rotate(-4deg);
+}
+
+.life-photo--home img {
+  height: 570px;
+}
+
+.life-photo--pause {
+  position: absolute;
+  left: 37%;
+  top: 220px;
+  z-index: 2;
+  width: min(30%, 350px);
+  transform: rotate(2deg);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.38);
+}
+
+.life-photo--pause img {
+  height: 510px;
+}
+
+.life-photo--family {
+  right: 1%;
+  top: 80px;
+  width: min(34%, 400px);
+  transform: rotate(4deg);
+}
+
+.life-photo--family img {
+  height: 540px;
+}
+
+.life__home-note {
+  margin: -3rem auto 0;
+  width: fit-content;
+  color: var(--red);
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  font-size: 1rem;
+  transform: rotate(-2deg);
+}
+
+.fireworks {
+  position: relative;
+  margin-top: 18rem;
+  margin-left:
+    max(-1.2rem, calc((1180px - 100vw) / 2));
+  margin-right:
+    max(-1.2rem, calc((1180px - 100vw) / 2));
+}
+
+.fireworks__prelude {
+  max-width: 600px;
+  margin:
+    0
+    max(1.2rem, calc((100vw - 1180px) / 2))
+    5rem;
+}
+
+.fireworks__prelude span {
+  color: var(--red);
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+}
+
+.fireworks__prelude p {
+  margin: 1rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.fireworks__photo {
+  position: relative;
+  margin: 0;
+  height: min(90vh, 900px);
+  overflow: hidden;
+}
+
+.fireworks__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+.fireworks__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 6, 7, 0.78),
+      rgba(8, 6, 7, 0.12) 52%,
+      rgba(8, 6, 7, 0.32)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(8, 6, 7, 0.5),
+      transparent 50%
+    );
+}
+
+.fireworks__photo figcaption {
+  position: absolute;
+  z-index: 2;
+  left: max(1.2rem, calc((100vw - 1180px) / 2));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fireworks__photo figcaption > span {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.62rem;
+}
+
+.fireworks__photo figcaption strong {
+  display: block;
+  max-width: 700px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 8vw, 8.5rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.065em;
+}
+
+.fireworks__photo figcaption em {
+  display: block;
+  color: var(--red);
+  font-weight: 400;
+}
+
+.fireworks__after {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.2rem 0;
+  text-align: center;
+}
+
+.fireworks__after span {
+  color: rgba(233, 223, 212, 0.35);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.fireworks__after strong {
+  margin-top: 0.5rem;
+  color: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  font-weight: 400;
+}
+
+.fireworks__after i {
+  margin-top: 1.5rem;
+  color: var(--red);
+  font-size: 1.5rem;
+}
+
+.life__ending {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.life__ending span {
+  color: rgba(233, 223, 212, 0.35);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.life__ending div {
+  width: 1px;
+  height: 120px;
+  margin: 2rem 0;
+  background: linear-gradient(var(--red), transparent);
+}
+
+.life__ending strong {
+  color: var(--red);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .life {
+    padding-top: 7rem;
+  }
+
+  .life__chapter {
+    margin-bottom: 4rem;
+  }
+
+  .life__intro h2 {
+    font-size: clamp(4.4rem, 20vw, 7rem);
+  }
+
+  .life__intro-copy {
+    margin-left: 0;
+  }
+
+  .life__collage {
+    min-height: 1350px;
+    margin-top: 7rem;
+  }
+
+  .life-photo--tradition {
+    width: 76%;
+    top: 100px;
+  }
+
+  .life-photo--tradition img {
+    height: auto;
+  }
+
+  .life__tradition-copy {
+    left: auto;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+  }
+
+  .life-photo--night {
+    width: 58%;
+    right: 0;
+    top: 610px;
+  }
+
+  .life-photo--night img {
+    height: auto;
+  }
+
+  .life-photo--role {
+    left: 3%;
+    bottom: 30px;
+    width: 60%;
+  }
+
+  .life-photo--role img {
+    height: auto;
+  }
+
+  .life__scribble--night {
+    right: 0;
+    bottom: 200px;
+    width: 150px;
+  }
+
+  .life__gym {
+    display: block;
+    margin-top: 8rem;
+  }
+
+  .life__gym-photos {
+    min-height: 690px;
+    margin-top: 5rem;
+  }
+
+  .life-photo--gym-one,
+  .life-photo--gym-two {
+    width: 67%;
+  }
+
+  .life-photo--gym-one img,
+  .life-photo--gym-two img {
+    height: auto;
+  }
+
+  .life-photo--gym-two {
+    top: 210px;
+  }
+
+  .life__gym-note {
+    bottom: 20px;
+  }
+
+  .life__slow {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 10rem;
+  }
+
+  .life-photo--grass {
+    width: 90%;
+    align-self: flex-start;
+  }
+
+  .life-photo--grass img {
+    height: auto;
+  }
+
+  .life__home {
+    margin-top: 11rem;
+  }
+
+  .life__home header {
+    margin-bottom: 5rem;
+  }
+
+  .life__home-cards {
+    min-height: 1000px;
+  }
+
+  .life-photo--home {
+    width: 70%;
+    left: 0;
+  }
+
+  .life-photo--home img {
+    height: auto;
+  }
+
+  .life-photo--pause {
+    width: 57%;
+    left: auto;
+    right: 0;
+    top: 370px;
+  }
+
+  .life-photo--pause img {
+    height: auto;
+  }
+
+  .life-photo--family {
+    width: 68%;
+    right: auto;
+    left: 5%;
+    top: 650px;
+  }
+
+  .life-photo--family img {
+    height: auto;
+  }
+
+  .life__home-note {
+    margin-top: 1rem;
+  }
+
+  .fireworks {
+    margin-top: 12rem;
+  }
+
+  .fireworks__prelude {
+    margin-bottom: 3rem;
+  }
+
+  .fireworks__photo {
+    height: 78vh;
+    min-height: 620px;
+  }
+
+  .fireworks__photo img {
+    object-position: 55% center;
+  }
+
+  .fireworks__shade {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(8, 6, 7, 0.75),
+        rgba(8, 6, 7, 0.05) 70%
+      );
+  }
+
+  .fireworks__photo figcaption {
+    top: auto;
+    left: 1.2rem;
+    right: 1.2rem;
+    bottom: 4rem;
+    transform: none;
+  }
+
+  .fireworks__photo figcaption strong {
+    font-size: clamp(3.5rem, 17vw, 6rem);
+  }
+
+  .life__ending {
+    min-height: 55vh;
   }
 }
