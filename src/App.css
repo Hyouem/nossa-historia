@@ -3133,3 +3133,1864 @@ button {
   opacity: 0.9;
   transform: scale(1.1);
 }
+
+/* =========================================================
+   CAPÍTULO 05 — O PEDIDO
+   ========================================================= */
+
+.proposal {
+  --proposal-paper: #eee4d8;
+  --proposal-ink: #171112;
+  --proposal-red: #9f1e2d;
+  position: relative;
+  overflow: hidden;
+  color: var(--proposal-paper);
+  background: #0a0809;
+}
+
+.proposal__opening {
+  position: relative;
+  min-height: 115vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:
+    8rem
+    max(1.5rem, calc((100vw - 1180px) / 2));
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgba(150, 24, 41, 0.15),
+      transparent 30%
+    ),
+    #0a0809;
+}
+
+.proposal__chapter {
+  position: absolute;
+  top: 7rem;
+  left: max(1.5rem, calc((100vw - 1180px) / 2));
+  margin: 0;
+  color: rgba(238, 228, 216, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.55rem;
+}
+
+.proposal__chapter strong {
+  margin-left: 0.6rem;
+  color: var(--proposal-red);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.proposal__dates {
+  display: grid;
+  grid-template-columns: 1fr minmax(130px, 0.5fr) 1fr;
+  align-items: center;
+  width: min(100%, 920px);
+  margin: 0 auto;
+}
+
+.proposal__date {
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.proposal__date span {
+  font-size: clamp(2.5rem, 6vw, 5.8rem);
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+}
+
+.proposal__date strong {
+  margin-top: 0.6rem;
+  font-size: clamp(4.8rem, 12vw, 11rem);
+  font-weight: 400;
+  line-height: 0.75;
+  letter-spacing: -0.08em;
+}
+
+.proposal__date--before {
+  opacity: 0.18;
+}
+
+.proposal__date--after {
+  color: var(--proposal-paper);
+  text-align: right;
+}
+
+.proposal__date--after strong {
+  color: var(--proposal-red);
+  font-style: italic;
+}
+
+.proposal__date-line {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proposal__date-line::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(238, 228, 216, 0.25),
+      transparent
+    );
+}
+
+.proposal__date-line span {
+  position: relative;
+  z-index: 1;
+  padding: 0.5rem 0.8rem;
+  color: rgba(238, 228, 216, 0.45);
+  background: #0a0809;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.48rem;
+}
+
+.proposal__opening-copy {
+  width: min(100%, 680px);
+  margin: 7rem auto 0;
+  text-align: center;
+}
+
+.proposal__opening-copy > span {
+  color: rgba(238, 228, 216, 0.38);
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.55rem;
+}
+
+.proposal__opening-copy h2 {
+  margin: 1.4rem 0 2.2rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 8vw, 7.8rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.065em;
+}
+
+.proposal__opening-copy h2 em {
+  display: block;
+  color: var(--proposal-red);
+  font-weight: 400;
+}
+
+.proposal__opening-copy p {
+  max-width: 500px;
+  margin: 0 auto;
+  color: rgba(238, 228, 216, 0.45);
+  line-height: 1.9;
+}
+
+.proposal__opening-copy strong {
+  display: block;
+  margin-top: 1rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.proposal__scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transform: translateX(-50%);
+}
+
+.proposal__scroll span {
+  color: rgba(238, 228, 216, 0.25);
+  letter-spacing: 0.3em;
+  font-size: 0.5rem;
+}
+
+.proposal__scroll i {
+  color: var(--proposal-red);
+  font-style: normal;
+}
+
+.proposal__gramado {
+  position: relative;
+  min-height: 1550px;
+  padding:
+    10rem
+    max(1.5rem, calc((100vw - 1180px) / 2));
+  background:
+    linear-gradient(
+      180deg,
+      #0a0809 0%,
+      #130c0e 55%,
+      #0a0809 100%
+    );
+}
+
+.proposal__place-copy {
+  position: relative;
+  z-index: 5;
+  width: min(100%, 680px);
+}
+
+.proposal__place-copy > span {
+  color: var(--proposal-red);
+  text-transform: uppercase;
+  letter-spacing: 0.45em;
+  font-size: 0.55rem;
+}
+
+.proposal__place-copy h3 {
+  margin: 1.3rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.proposal__place-copy em {
+  display: block;
+  color: rgba(238, 228, 216, 0.38);
+  font-weight: 400;
+}
+
+.proposal-shot {
+  position: absolute;
+  margin: 0;
+  padding: 0.65rem 0.65rem 3.7rem;
+  background: #d6c7b7;
+  box-shadow: 0 45px 110px rgba(0, 0, 0, 0.55);
+}
+
+.proposal-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proposal-shot figcaption {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  color: #2a2021;
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  font-size: 0.75rem;
+}
+
+.proposal-shot--gramado {
+  top: 390px;
+  left: max(1.5rem, calc((100vw - 1180px) / 2));
+  width: min(36vw, 420px);
+  transform: rotate(-3deg);
+}
+
+.proposal-shot--gramado img {
+  height: 570px;
+}
+
+.proposal-shot--bondinho {
+  top: 590px;
+  right: max(2rem, calc((100vw - 1110px) / 2));
+  width: min(31vw, 360px);
+  padding-bottom: 0.65rem;
+  transform: rotate(4deg);
+}
+
+.proposal-shot--bondinho img {
+  height: 510px;
+}
+
+.proposal-shot--us {
+  top: 1010px;
+  left: 50%;
+  width: min(30vw, 350px);
+  transform: translateX(-35%) rotate(2deg);
+}
+
+.proposal-shot--us img {
+  height: 470px;
+}
+
+.proposal__eternal {
+  position: relative;
+  padding:
+    12rem
+    max(1.5rem, calc((100vw - 1180px) / 2));
+  background: var(--proposal-paper);
+  color: var(--proposal-ink);
+}
+
+.proposal__eternal-header span {
+  color: rgba(23, 17, 18, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.55rem;
+}
+
+.proposal__eternal-header h3 {
+  margin: 1.5rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(5rem, 10vw, 10rem);
+  font-weight: 400;
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+}
+
+.proposal__eternal-header em {
+  display: block;
+  color: var(--proposal-red);
+  font-weight: 400;
+}
+
+.proposal__eternal-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.55fr 1fr;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-top: 9rem;
+}
+
+.proposal__eternal .proposal-shot {
+  position: relative;
+  inset: auto;
+  width: auto;
+}
+
+.proposal-shot--sign {
+  transform: rotate(-3deg);
+}
+
+.proposal-shot--sign img {
+  height: 620px;
+}
+
+.proposal-shot--fountain {
+  transform: rotate(3deg);
+}
+
+.proposal-shot--fountain img {
+  height: 620px;
+}
+
+.proposal__eternal-words {
+  text-align: center;
+}
+
+.proposal__eternal-words p {
+  margin: 0;
+  color: rgba(23, 17, 18, 0.55);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.proposal__eternal-words span {
+  display: block;
+  margin-top: 2rem;
+  color: var(--proposal-red);
+  font-size: 1.5rem;
+}
+
+.proposal__before {
+  position: relative;
+  min-height: 1700px;
+  padding:
+    12rem
+    max(1.5rem, calc((100vw - 1180px) / 2));
+  background: #0a0809;
+}
+
+.proposal__before-copy {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.proposal__before-copy span {
+  color: rgba(238, 228, 216, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.45em;
+  font-size: 0.55rem;
+}
+
+.proposal__before-copy h3 {
+  margin: 1.5rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 9vw, 8.5rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.07em;
+}
+
+.proposal__before-copy em {
+  display: block;
+  color: var(--proposal-red);
+  font-weight: 400;
+}
+
+.proposal__moment {
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+  box-shadow: 0 45px 100px rgba(0, 0, 0, 0.5);
+}
+
+.proposal__moment img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proposal__moment--one {
+  top: 530px;
+  left: 8%;
+  width: min(34vw, 470px);
+  height: 670px;
+  transform: rotate(-2deg);
+}
+
+.proposal__moment--two {
+  top: 720px;
+  right: 7%;
+  width: min(30vw, 400px);
+  height: 540px;
+  transform: rotate(2deg);
+}
+
+.proposal__moment--three {
+  top: 1120px;
+  left: 50%;
+  width: min(35vw, 460px);
+  height: 500px;
+  transform: translateX(-50%);
+}
+
+.proposal__question {
+  min-height: 110vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 1.5rem;
+  text-align: center;
+  background: #070506;
+}
+
+.proposal__question > span {
+  color: var(--proposal-red);
+  letter-spacing: 0.55em;
+  font-size: 0.55rem;
+}
+
+.proposal__question > p {
+  margin: 4rem 0 0;
+  color: rgba(238, 228, 216, 0.38);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.proposal__question h3 {
+  max-width: 1000px;
+  margin: 1rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4.2rem, 9vw, 9rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.07em;
+}
+
+.proposal__question h3 em {
+  display: block;
+  color: var(--proposal-red);
+  font-weight: 400;
+}
+
+.proposal__question-line {
+  width: 1px;
+  height: 100px;
+  margin: 4rem 0;
+  background:
+    linear-gradient(
+      transparent,
+      var(--proposal-red),
+      transparent
+    );
+}
+
+.proposal__question > strong {
+  max-width: 650px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.6rem, 3vw, 2.7rem);
+  font-weight: 400;
+}
+
+.proposal__question > b {
+  margin-top: 0.7rem;
+  color: var(--proposal-red);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.proposal__ring {
+  position: relative;
+  min-height: 120vh;
+  display: grid;
+  place-items: center;
+  padding: 8rem 1.5rem;
+  background: #070506;
+}
+
+.proposal__ring-glow {
+  position: absolute;
+  width: min(80vw, 850px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(159, 30, 45, 0.13);
+  filter: blur(110px);
+}
+
+.proposal__ring figure {
+  position: relative;
+  z-index: 1;
+  width: min(72vw, 650px);
+  margin: 0;
+  padding: 0.8rem;
+  background: #d5c7b8;
+  box-shadow: 0 60px 160px rgba(0, 0, 0, 0.7);
+  transform: rotate(-2deg);
+}
+
+.proposal__ring figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.proposal__answer {
+  position: absolute;
+  z-index: 3;
+  right: max(5%, calc((100vw - 1180px) / 2));
+  bottom: 10%;
+}
+
+.proposal__answer span {
+  color: rgba(238, 228, 216, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.5rem;
+}
+
+.proposal__answer h3 {
+  margin: 0.7rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.07em;
+}
+
+.proposal__answer h3 em {
+  display: block;
+  color: var(--proposal-red);
+  font-weight: 400;
+}
+
+.proposal__answer p {
+  margin: 1rem 0 0;
+  color: var(--proposal-red);
+  font-size: 1.8rem;
+}
+
+.proposal__after {
+  padding:
+    12rem
+    max(1.5rem, calc((100vw - 1180px) / 2));
+  background: var(--proposal-paper);
+  color: var(--proposal-ink);
+}
+
+.proposal__after-intro {
+  max-width: 850px;
+}
+
+.proposal__after-intro span {
+  color: var(--proposal-red);
+  text-transform: uppercase;
+  letter-spacing: 0.45em;
+  font-size: 0.55rem;
+}
+
+.proposal__after-intro h3 {
+  margin: 1.3rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.84;
+  letter-spacing: -0.065em;
+}
+
+.proposal__after-intro em {
+  display: block;
+  color: var(--proposal-red);
+  font-weight: 400;
+}
+
+.proposal__after-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: clamp(1rem, 3vw, 3rem);
+  margin-top: 8rem;
+}
+
+.proposal-after-photo {
+  margin: 0;
+  padding: 0.55rem;
+  background: #fffaf4;
+  box-shadow: 0 30px 70px rgba(39, 25, 27, 0.18);
+}
+
+.proposal-after-photo img {
+  display: block;
+  width: 100%;
+  height: 530px;
+  object-fit: cover;
+}
+
+.proposal-after-photo--one {
+  transform: rotate(-3deg);
+}
+
+.proposal-after-photo--two {
+  transform: translateY(70px) rotate(1deg);
+}
+
+.proposal-after-photo--three {
+  transform: rotate(3deg);
+}
+
+.proposal__ending {
+  min-height: 110vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 9rem 1.5rem;
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(159, 30, 45, 0.12),
+      transparent 35%
+    ),
+    #0a0809;
+}
+
+.proposal__ending > span {
+  color: rgba(238, 228, 216, 0.35);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
+}
+
+.proposal__ending-line {
+  width: 1px;
+  height: 60px;
+  margin: 1rem 0;
+  background: rgba(238, 228, 216, 0.2);
+}
+
+.proposal__ending > p {
+  margin: 0;
+  color: var(--proposal-red);
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.5rem;
+}
+
+.proposal__ending h3 {
+  max-width: 900px;
+  margin: 5rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+}
+
+.proposal__ending h3 em {
+  display: block;
+  margin-top: 0.2em;
+  color: var(--proposal-red);
+  font-weight: 400;
+}
+
+.proposal__ending > strong {
+  margin-top: 2.5rem;
+  color: rgba(238, 228, 216, 0.65);
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  font-size: 1rem;
+  font-weight: 400;
+  transform: rotate(-3deg);
+}
+
+.proposal__ending > i {
+  margin-top: 6rem;
+  color: var(--proposal-red);
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+@media (max-width: 720px) {
+  .proposal__opening {
+    min-height: 120vh;
+    padding-top: 10rem;
+  }
+
+  .proposal__dates {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .proposal__date--after {
+    text-align: center;
+  }
+
+  .proposal__date-line {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .proposal__opening-copy {
+    margin-top: 5rem;
+  }
+
+  .proposal__gramado {
+    min-height: 1850px;
+    padding-top: 8rem;
+  }
+
+  .proposal__place-copy h3 {
+    font-size: clamp(3.7rem, 17vw, 6rem);
+  }
+
+  .proposal-shot--gramado {
+    top: 430px;
+    left: 6%;
+    width: 72%;
+  }
+
+  .proposal-shot--gramado img {
+    height: auto;
+  }
+
+  .proposal-shot--bondinho {
+    top: 850px;
+    right: 5%;
+    width: 66%;
+  }
+
+  .proposal-shot--bondinho img {
+    height: auto;
+  }
+
+  .proposal-shot--us {
+    top: 1260px;
+    left: 8%;
+    width: 68%;
+    transform: rotate(-2deg);
+  }
+
+  .proposal-shot--us img {
+    height: auto;
+  }
+
+  .proposal__eternal {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .proposal__eternal-header h3 {
+    font-size: clamp(4.2rem, 20vw, 7rem);
+  }
+
+  .proposal__eternal-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin-top: 6rem;
+  }
+
+  .proposal-shot--sign img,
+  .proposal-shot--fountain img {
+    height: auto;
+  }
+
+  .proposal__eternal-words {
+    padding: 0 1rem;
+  }
+
+  .proposal__before {
+    min-height: auto;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+
+  .proposal__before-copy h3 {
+    font-size: clamp(4rem, 18vw, 6rem);
+  }
+
+  .proposal__moment {
+    position: relative;
+    inset: auto;
+    width: 82%;
+    height: auto;
+    margin-top: 5rem;
+  }
+
+  .proposal__moment img {
+    height: auto;
+  }
+
+  .proposal__moment--one {
+    margin-left: 0;
+  }
+
+  .proposal__moment--two {
+    margin-left: auto;
+  }
+
+  .proposal__moment--three {
+    left: auto;
+    margin-left: 8%;
+    transform: rotate(-1deg);
+  }
+
+  .proposal__question {
+    min-height: 105vh;
+  }
+
+  .proposal__question h3 {
+    font-size: clamp(4rem, 18vw, 6.5rem);
+  }
+
+  .proposal__ring {
+    min-height: 105vh;
+    padding-bottom: 15rem;
+  }
+
+  .proposal__ring figure {
+    width: 88vw;
+  }
+
+  .proposal__answer {
+    right: auto;
+    bottom: 7%;
+    left: 8%;
+  }
+
+  .proposal__after {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+  }
+
+  .proposal__after-intro h3 {
+    font-size: clamp(3.8rem, 17vw, 6rem);
+  }
+
+  .proposal__after-gallery {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 6rem;
+  }
+
+  .proposal-after-photo {
+    width: 82%;
+  }
+
+  .proposal-after-photo img {
+    height: auto;
+  }
+
+  .proposal-after-photo--one {
+    margin-right: auto;
+  }
+
+  .proposal-after-photo--two {
+    margin-left: auto;
+    transform: rotate(2deg);
+  }
+
+  .proposal-after-photo--three {
+    margin-right: auto;
+  }
+
+  .proposal__ending h3 {
+    font-size: clamp(3.4rem, 16vw, 6rem);
+  }
+}
+
+/* =========================================================
+   AJUSTE FINAL — CAPÍTULO 05 / GRAMADO + ANEL
+   Mantém texto e fotografia em áreas próprias.
+   ========================================================= */
+
+/* ---------- GRAMADO ---------- */
+
+.proposal__gramado {
+  min-height: 1720px;
+  padding-top: 9rem;
+}
+
+.proposal__place-copy {
+  position: relative;
+  z-index: 6;
+  width: min(100%, 940px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.proposal__place-copy h3 {
+  margin-top: 1.2rem;
+  font-size: clamp(4.5rem, 7.4vw, 7.4rem);
+  line-height: 0.84;
+}
+
+.proposal__place-copy em {
+  margin-top: 0.12em;
+}
+
+/*
+ * A galeria começa DEPOIS do título.
+ * Nenhuma fotografia atravessa mais a tipografia.
+ */
+
+.proposal-shot--gramado {
+  top: 500px;
+  left: max(3rem, calc((100vw - 1080px) / 2));
+  width: min(34vw, 400px);
+  transform: rotate(-3deg);
+}
+
+.proposal-shot--gramado img {
+  height: 545px;
+}
+
+.proposal-shot--bondinho {
+  top: 620px;
+  right: max(3rem, calc((100vw - 1080px) / 2));
+  width: min(30vw, 350px);
+  transform: rotate(3deg);
+}
+
+.proposal-shot--bondinho img {
+  height: 495px;
+}
+
+.proposal-shot--us {
+  top: 1110px;
+  left: 50%;
+  width: min(29vw, 340px);
+  transform: translateX(-50%) rotate(1.5deg);
+}
+
+.proposal-shot--us img {
+  height: 455px;
+}
+
+
+/* ---------- REVELAÇÃO DO ANEL ---------- */
+
+/*
+ * Antes: foto central + texto absoluto no canto.
+ * Agora: foto e resposta formam uma composição de duas colunas.
+ */
+
+.proposal__ring {
+  min-height: 115vh;
+  grid-template-columns:
+    minmax(320px, 580px)
+    minmax(300px, 460px);
+  place-items: center;
+  justify-content: center;
+  gap: clamp(4rem, 8vw, 9rem);
+  padding:
+    9rem
+    max(2rem, calc((100vw - 1180px) / 2));
+}
+
+.proposal__ring figure {
+  width: min(42vw, 560px);
+  margin: 0;
+  transform: rotate(-1.5deg);
+}
+
+.proposal__answer {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  align-self: center;
+  width: min(100%, 430px);
+}
+
+.proposal__answer span {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.proposal__answer h3 {
+  margin: 0;
+  font-size: clamp(4rem, 6vw, 6.5rem);
+  line-height: 0.82;
+}
+
+.proposal__answer h3 em {
+  margin-top: 0.08em;
+}
+
+.proposal__answer p {
+  margin-top: 1.5rem;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 720px) {
+  .proposal__gramado {
+    min-height: auto;
+    padding-top: 7rem;
+    padding-bottom: 9rem;
+  }
+
+  .proposal__place-copy {
+    width: 100%;
+    text-align: left;
+  }
+
+  .proposal__place-copy h3 {
+    font-size: clamp(3.7rem, 16vw, 5.7rem);
+    line-height: 0.87;
+  }
+
+  .proposal-shot--gramado,
+  .proposal-shot--bondinho,
+  .proposal-shot--us {
+    position: relative;
+    inset: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .proposal-shot--gramado {
+    width: 82%;
+    margin-top: 5rem;
+    margin-right: auto;
+    transform: rotate(-2deg);
+  }
+
+  .proposal-shot--bondinho {
+    width: 72%;
+    margin-top: 3rem;
+    margin-left: auto;
+    transform: rotate(2deg);
+  }
+
+  .proposal-shot--us {
+    width: 76%;
+    margin-top: 3rem;
+    margin-right: auto;
+    transform: rotate(-1deg);
+  }
+
+  .proposal-shot--gramado img,
+  .proposal-shot--bondinho img,
+  .proposal-shot--us img {
+    height: auto;
+  }
+
+  .proposal__ring {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding:
+      8rem
+      1.5rem
+      9rem;
+  }
+
+  .proposal__ring figure {
+    width: min(88vw, 540px);
+    align-self: center;
+  }
+
+  .proposal__answer {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    align-self: flex-start;
+    padding-left: 5%;
+  }
+
+  .proposal__answer h3 {
+    font-size: clamp(4rem, 18vw, 6rem);
+  }
+}
+
+/* =========================================================
+   CONSOLIDAÇÃO VISUAL — FOTOS + CAMADAS + TEXTOS
+   ========================================================= */
+
+
+/* =========================================================
+   ESCRITAS MANUSCRITAS
+   ========================================================= */
+
+.hero__scribble,
+.memories__scribble,
+.memories__pair-caption,
+.life__scribble,
+.life__gym-note,
+.life__home-note,
+.soundtrack__scribble {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Coração da Andradas */
+.night__heart {
+  left: 2rem;
+  bottom: 1.4rem;
+}
+
+
+/* =========================================================
+   CAPÍTULO 02 — FOTOS QUE NÃO ERAM POLAROID
+   ========================================================= */
+
+/*
+ * Moldura externa via box-shadow:
+ * não altera width, height ou coordenadas.
+ */
+.together .memory--quiet,
+.together .memory--pair-one,
+.together .memory--pair-two,
+.together .memory--adventure {
+  box-shadow:
+    0 0 0 10px #ddd1c4,
+    0 34px 90px rgba(0, 0, 0, 0.46) !important;
+}
+
+
+/* =========================================================
+   CAPÍTULO 02 — AVENTURA
+   TEXTO REALMENTE AO LADO DA FOTO
+   ========================================================= */
+
+.memories__adventure {
+  display: grid !important;
+
+  grid-template-columns:
+    minmax(460px, 0.95fr)
+    minmax(0, 1.05fr);
+
+  gap: clamp(2.5rem, 5vw, 5rem);
+
+  align-items: center;
+
+  margin-top: 14rem !important;
+  padding-bottom: 0 !important;
+}
+
+
+/*
+ * A foto vem primeiro no JSX, então mandamos explicitamente
+ * para a coluna 2.
+ */
+.together .memory--adventure {
+  position: relative !important;
+
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  overflow: visible !important;
+
+  z-index: 2 !important;
+}
+
+.together .memory--adventure img {
+  display: block !important;
+
+  width: 100% !important;
+  height: 680px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: cover !important;
+
+  box-shadow: none !important;
+}
+
+
+/*
+ * E o texto, que vem depois no JSX, volta para a coluna 1.
+ */
+.memories__adventure-copy {
+  position: relative !important;
+
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+
+  inset: auto !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  transform: none !important;
+
+  z-index: 4 !important;
+
+  font-size: clamp(2.5rem, 3.7vw, 4.1rem) !important;
+  line-height: 0.97 !important;
+}
+
+.memories__adventure-copy span,
+.memories__adventure-copy strong {
+  display: block !important;
+  position: static !important;
+
+  width: auto !important;
+  max-width: 100% !important;
+
+  transform: none !important;
+}
+
+.memories__adventure-copy strong {
+  margin-top: 0.28em !important;
+}
+
+
+/* =========================================================
+   CAPÍTULO 03 — COLAGEM INICIAL
+   ========================================================= */
+
+/*
+ * Ordem correta:
+ *
+ * tradição -> na frente
+ * rolê     -> no meio
+ * noite    -> atrás
+ *
+ * Assim a foto central nunca cobre "a gente combina".
+ */
+.life-photo--tradition {
+  z-index: 5 !important;
+}
+
+.life-photo--role {
+  z-index: 2 !important;
+}
+
+.life-photo--night {
+  z-index: 1 !important;
+
+  box-shadow:
+    0 0 0 9px #ddd1c4,
+    0 30px 80px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+/*
+ * Volta a rotação original do rolê.
+ * Remove qualquer translate experimental anterior.
+ */
+.life-photo--role {
+  transform: rotate(1.5deg) !important;
+}
+
+
+/*
+ * A legenda da polaroid da tradição fica protegida
+ * pela camada da própria figure.
+ */
+.life-photo--tradition figcaption {
+  z-index: 6 !important;
+}
+
+.life__tradition-copy {
+  z-index: 7 !important;
+}
+
+
+/* =========================================================
+   CAPÍTULO 03 — FOTO NA GRAMA
+   ========================================================= */
+
+.life-photo--grass {
+  box-shadow:
+    0 0 0 9px #ddd1c4,
+    0 40px 100px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+/* =========================================================
+   CAPÍTULO 03 — MURAL DE CASA
+   ========================================================= */
+
+/*
+ * As duas polaroids com texto ficam na frente.
+ */
+.life-photo--home,
+.life-photo--family {
+  z-index: 4 !important;
+}
+
+
+/*
+ * A fotografia central fica ATRÁS delas,
+ * mas agora recebe a mesma moldura creme.
+ */
+.life-photo--pause {
+  z-index: 1 !important;
+
+  box-shadow:
+    0 0 0 9px #ddd1c4,
+    0 35px 90px rgba(0, 0, 0, 0.38) !important;
+}
+
+
+/*
+ * Rodapés das polaroids sempre visíveis.
+ */
+.life-photo--home figcaption,
+.life-photo--family figcaption {
+  z-index: 6 !important;
+}
+
+
+/* =========================================================
+   CAPÍTULO 04 — SHOWS
+   ========================================================= */
+
+/*
+ * O problema aqui NÃO era a legenda.
+ * Era uma figure inteira passando por cima da outra.
+ *
+ * Mantemos o mural tortinho, mas sem sobreposição destrutiva.
+ */
+.soundtrack__gallery {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: clamp(1.5rem, 3vw, 3.25rem);
+
+  align-items: start;
+
+  min-height: 780px !important;
+  margin-top: 9rem !important;
+}
+
+
+.concert-photo {
+  position: relative !important;
+
+  inset: auto !important;
+
+  width: 100% !important;
+
+  box-sizing: border-box !important;
+
+  overflow: visible !important;
+
+  z-index: auto !important;
+}
+
+
+/*
+ * Continuam parecendo fotos jogadas num mural,
+ * só que uma não destrói o texto da outra.
+ */
+.concert-photo--us {
+  transform:
+    translateY(55px)
+    rotate(-4deg) !important;
+}
+
+.concert-photo--stage {
+  transform:
+    translateY(0)
+    rotate(1.5deg) !important;
+}
+
+.concert-photo--night {
+  transform:
+    translateY(70px)
+    rotate(4deg) !important;
+}
+
+
+.concert-photo figcaption {
+  z-index: 3 !important;
+  overflow: visible !important;
+}
+
+.concert-photo figcaption span,
+.concert-photo figcaption strong {
+  position: relative !important;
+
+  z-index: 4 !important;
+
+  white-space: nowrap;
+
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   CAPÍTULO 05 — GRAMADO
+   ========================================================= */
+
+/*
+ * Mantém o respiro que já tínhamos conquistado entre
+ * "Com uma pergunta escondida" e as fotos.
+ */
+.proposal__gramado {
+  min-height: 1810px !important;
+}
+
+.proposal-shot--gramado {
+  top: 590px !important;
+}
+
+.proposal-shot--bondinho {
+  top: 700px !important;
+}
+
+.proposal-shot--us {
+  top: 1190px !important;
+}
+
+
+/* =========================================================
+   CAPÍTULO 05 — TRÊS MOMENTOS ANTES DA PERGUNTA
+   ========================================================= */
+
+/*
+ * Estas eram as três fotos que voltaram a aparecer sem borda.
+ * Moldura externa = não altera geometria.
+ */
+.proposal__moment {
+  box-shadow:
+    0 0 0 10px #eee4d8,
+    0 45px 100px rgba(0, 0, 0, 0.5) !important;
+}
+
+
+/* =========================================================
+   CAPÍTULO 05 — DEPOIS DO SIM
+   UMA ÚNICA BORDA
+   ========================================================= */
+
+.proposal-after-photo {
+  box-sizing: border-box !important;
+
+  padding: 10px !important;
+
+  border: 0 !important;
+  outline: 0 !important;
+
+  background: #eee4d8 !important;
+
+  box-shadow:
+    0 30px 70px rgba(39, 25, 27, 0.18) !important;
+}
+
+.proposal-after-photo img {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   CAPÍTULO 05 — ANEL
+   UMA ÚNICA BORDA
+   ========================================================= */
+
+.proposal__ring figure {
+  padding: 10px !important;
+
+  border: 0 !important;
+  outline: 0 !important;
+
+  background: #eee4d8 !important;
+
+  box-shadow:
+    0 60px 160px rgba(0, 0, 0, 0.7) !important;
+}
+
+.proposal__ring figure img {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  .memories__adventure {
+    grid-template-columns: 1fr !important;
+
+    gap: 3rem !important;
+  }
+
+  .memories__adventure-copy {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+
+    max-width: 680px !important;
+  }
+
+  .together .memory--adventure {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+
+    width: 90% !important;
+
+    margin-left: auto !important;
+  }
+
+  .together .memory--adventure img {
+    height: auto !important;
+  }
+
+  .soundtrack__gallery {
+    grid-template-columns: 1fr !important;
+
+    gap: 5rem !important;
+
+    min-height: auto !important;
+  }
+
+  .concert-photo {
+    width: min(82%, 520px) !important;
+  }
+
+  .concert-photo--us {
+    margin-right: auto !important;
+
+    transform: rotate(-3deg) !important;
+  }
+
+  .concert-photo--stage {
+    margin-left: auto !important;
+
+    transform: rotate(2deg) !important;
+  }
+
+  .concert-photo--night {
+    margin-right: auto !important;
+
+    transform: rotate(-2deg) !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+  .night__heart {
+    position: static !important;
+
+    display: block;
+
+    margin:
+      2rem
+      0
+      0
+      1rem;
+  }
+
+
+  .memories__adventure {
+    margin-top: 10rem !important;
+  }
+
+  .memories__adventure-copy {
+    font-size:
+      clamp(2.6rem, 12vw, 4rem) !important;
+  }
+
+  .together .memory--adventure {
+    width: 92% !important;
+  }
+
+
+  .life-photo--night {
+    box-shadow:
+      0 0 0 7px #ddd1c4,
+      0 24px 60px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .life-photo--grass,
+  .life-photo--pause {
+    box-shadow:
+      0 0 0 7px #ddd1c4,
+      0 24px 60px rgba(0, 0, 0, 0.4) !important;
+  }
+
+
+  .proposal__gramado {
+    min-height: auto !important;
+  }
+
+  .proposal-shot--gramado,
+  .proposal-shot--bondinho,
+  .proposal-shot--us {
+    top: auto !important;
+  }
+
+  .proposal-shot--gramado {
+    margin-top: 7rem !important;
+  }
+
+
+  .proposal__moment {
+    box-shadow:
+      0 0 0 7px #eee4d8,
+      0 30px 70px rgba(0, 0, 0, 0.45) !important;
+  }
+}
+
+/* =========================================================
+   ANOTAÇÕES FORA DAS FOTOS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   "a gente sendo a gente."
+   --------------------------------------------------------- */
+
+/*
+ * As fotos continuam absolutas.
+ * Apenas aumentamos a altura do mural para criar uma faixa
+ * escura real abaixo delas.
+ */
+.memories__pair {
+  min-height: 930px !important;
+  padding-bottom: 0 !important;
+}
+
+/*
+ * A frase ocupa exclusivamente a faixa inferior.
+ */
+.memories__pair-caption {
+  position: absolute !important;
+
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 12px !important;
+
+  z-index: 20 !important;
+
+  width: max-content !important;
+  max-width: 90% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg) !important;
+
+  white-space: nowrap !important;
+}
+
+
+/* ---------------------------------------------------------
+   "casal que treina junto..."
+   "reclama junto também."
+   --------------------------------------------------------- */
+
+/*
+ * A foto inferior chegava praticamente até o final dos
+ * 720px originais. Criamos mais altura exclusivamente
+ * para a anotação.
+ */
+.life__gym-photos {
+  min-height: 850px !important;
+  padding-bottom: 0 !important;
+}
+
+.life__gym-note {
+  position: absolute !important;
+
+  left: 2rem !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 18px !important;
+
+  z-index: 20 !important;
+
+  width: max-content !important;
+  max-width: calc(100% - 4rem) !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+
+  transform: rotate(-2deg) !important;
+}
+
+.life__gym-note small {
+  display: block !important;
+  margin:
+    0.55rem
+    0
+    0
+    3rem !important;
+}
+
+
+/* ---------------------------------------------------------
+   "bons shows."
+   "melhores companhias."
+   --------------------------------------------------------- */
+
+/*
+ * Este texto vem DEPOIS das três figures no JSX.
+ * Portanto ele não precisa ser absoluto.
+ *
+ * Transformamos em uma quarta área normal do grid,
+ * abaixo das três polaroids.
+ */
+.soundtrack__scribble {
+  position: relative !important;
+
+  inset: auto !important;
+
+  grid-column:
+    1 / -1 !important;
+
+  justify-self: end !important;
+  align-self: start !important;
+
+  width: max-content !important;
+  max-width: 90% !important;
+
+  margin:
+    2.75rem
+    5%
+    0
+    0 !important;
+
+  padding: 0 !important;
+
+  z-index: 20 !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+
+  transform: rotate(-4deg) !important;
+}
+
+
+/*
+ * Um pouco de espaço depois do mural para a anotação
+ * respirar antes da próxima seção.
+ */
+.soundtrack__gallery {
+  padding-bottom: 4rem !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+  .memories__pair {
+    min-height: 720px !important;
+  }
+
+  .memories__pair-caption {
+    bottom: 8px !important;
+
+    width: 90% !important;
+
+    white-space: normal !important;
+    text-align: center;
+  }
+
+
+  .life__gym-photos {
+    min-height: 800px !important;
+  }
+
+  .life__gym-note {
+    left: 1rem !important;
+
+    max-width:
+      calc(100% - 2rem) !important;
+  }
+
+
+  .soundtrack__scribble {
+    justify-self: start !important;
+
+    margin:
+      1rem
+      0
+      0
+      1.5rem !important;
+  }
+}

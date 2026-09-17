@@ -131,14 +131,9 @@ function App() {
             <div className="hero__photo-number">01</div>
 
             <div className="hero__scribble hero__scribble--bottom">
-              ainda bem que eu mandei aquela cantada ↗
+              ainda bem que eu mandei aquela cantada
             </div>
           </div>
-        </div>
-
-        <div className="hero__scroll">
-          <span>rola pra baixo</span>
-          <div />
         </div>
       </section>
 
@@ -180,7 +175,7 @@ function App() {
             </div>
 
             <span className="night__note">
-              e não é que funcionou? ↗
+              e não é que funcionou? ♥
             </span>
           </article>
 
@@ -297,7 +292,6 @@ function App() {
             />
 
             <figcaption>
-              <span>21.02.2025</span>
               <strong>oficialmente nós.</strong>
             </figcaption>
           </figure>
@@ -333,7 +327,7 @@ function App() {
             </figure>
 
             <p className="memories__scribble memories__scribble--celebration">
-              qualquer motivo fica melhor com você ↗
+              qualquer motivo fica melhor com você
             </p>
           </div>
 
@@ -510,7 +504,7 @@ function App() {
           </figure>
 
           <p className="life__scribble life__scribble--night">
-            aparentemente a gente gosta de sair de casa ↗
+            aparentemente a gente gosta de sair de casa
           </p>
         </div>
 
@@ -922,6 +916,254 @@ function App() {
           <strong>e essa ainda está tocando.</strong>
           <div />
           <b>↓</b>
+        </footer>
+      </section>
+
+      <section className="proposal">
+        <div className="proposal__opening">
+          <p className="proposal__chapter">
+            capítulo <strong>05</strong>
+          </p>
+
+          <div className="proposal__dates">
+            <div className="proposal__date proposal__date--before">
+              <span>21.02</span>
+              <strong>2025</strong>
+            </div>
+
+            <div className="proposal__date-line">
+              <span>365 dias</span>
+            </div>
+
+            <div className="proposal__date proposal__date--after">
+              <span>21.02</span>
+              <strong>2026</strong>
+            </div>
+          </div>
+
+          <div className="proposal__opening-copy">
+            <span>um ano depois de virar nós...</span>
+
+            <h2>
+              eu tinha
+              <em>outros planos.</em>
+            </h2>
+
+            <p>
+              Gramado parecia só mais um lugar bonito
+              para guardar na nossa história.
+            </p>
+
+            <strong>Mas aquela data já carregava outra coisa.</strong>
+          </div>
+
+          <div className="proposal__scroll">
+            <span>21.02.2026</span>
+            <i>↓</i>
+          </div>
+        </div>
+
+        <div className="proposal__gramado">
+          <div className="proposal__place-copy">
+            <span>Gramado · RS</span>
+
+            <h3>
+              Um dia bonito.
+              <em>Com uma pergunta escondida.</em>
+            </h3>
+          </div>
+
+          <figure className="proposal-shot proposal-shot--gramado">
+            <img
+              src="/images/04-pedido/03-gramado.jpg"
+              alt="Maurício e Brenda juntos em Gramado"
+            />
+            <figcaption>
+              por enquanto, ela não sabia. ♥
+            </figcaption>
+          </figure>
+
+          <figure className="proposal-shot proposal-shot--bondinho">
+            <img
+              src="/images/04-pedido/06-bondinho.jpg"
+              alt="Maurício e Brenda juntos durante o passeio em Gramado"
+            />
+          </figure>
+
+          <figure className="proposal-shot proposal-shot--us">
+            <img
+              src="/images/04-pedido/04-nos.jpg"
+              alt="Maurício e Brenda juntos em Gramado"
+            />
+            <figcaption>
+              eu sabia.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div className="proposal__eternal">
+          <header className="proposal__eternal-header">
+            <span>e então chegamos aqui.</span>
+
+            <h3>
+              Fonte do
+              <em>Amor Eterno.</em>
+            </h3>
+          </header>
+
+          <div className="proposal__eternal-grid">
+            <figure className="proposal-shot proposal-shot--sign">
+              <img
+                src="/images/04-pedido/02-fonte-amor-eterno.jpg"
+                alt="Maurício e Brenda na Fonte do Amor Eterno"
+              />
+            </figure>
+
+            <div className="proposal__eternal-words">
+              <p>
+                Um lugar com um nome perigosamente apropriado
+                para o que eu estava prestes a fazer.
+              </p>
+
+              <span>♥</span>
+            </div>
+
+            <figure className="proposal-shot proposal-shot--fountain">
+              <img
+                src="/images/04-pedido/05-fonte.jpg"
+                alt="Maurício e Brenda juntos diante da fonte"
+              />
+            </figure>
+          </div>
+        </div>
+
+        <div className="proposal__before">
+          <div className="proposal__before-copy">
+            <span>e por alguns segundos...</span>
+
+            <h3>
+              o resto do lugar
+              <em>sumiu.</em>
+            </h3>
+          </div>
+
+          <figure className="proposal__moment proposal__moment--one">
+            <img
+              src="/images/04-pedido/08-momento.jpg"
+              alt="Maurício e Brenda vivendo um momento juntos"
+            />
+          </figure>
+
+          <figure className="proposal__moment proposal__moment--two">
+            <img
+              src="/images/04-pedido/09-carinho.jpg"
+              alt="Maurício e Brenda em um momento de carinho"
+            />
+          </figure>
+
+          <figure className="proposal__moment proposal__moment--three">
+            <img
+              src="/images/04-pedido/07-beijo.jpg"
+              alt="Maurício e Brenda se beijando"
+            />
+          </figure>
+        </div>
+
+        <div className="proposal__question">
+          <span>21 · 02 · 2026</span>
+
+          <p>Um ano antes, eu te pedi pra ser minha namorada.</p>
+
+          <h3>
+            Dessa vez,
+            <em>eu tinha uma pergunta maior.</em>
+          </h3>
+
+          <div className="proposal__question-line" />
+
+          <strong>
+            Eu queria saber se você toparia
+            continuar sendo nós.
+          </strong>
+
+          <b>Pra sempre.</b>
+        </div>
+
+        <div className="proposal__ring">
+          <div className="proposal__ring-glow" />
+
+          <figure>
+            <img
+              src="/images/04-pedido/01-anel.jpg"
+              alt="Brenda mostrando o anel do pedido de casamento"
+            />
+          </figure>
+
+          <div className="proposal__answer">
+            <span>e então...</span>
+
+            <h3>
+              você disse
+              <em>sim.</em>
+            </h3>
+
+            <p>♥</p>
+          </div>
+        </div>
+
+        <div className="proposal__after">
+          <div className="proposal__after-intro">
+            <span>depois do sim</span>
+
+            <h3>
+              O mesmo nós.
+              <em>Com um para sempre pela frente.</em>
+            </h3>
+          </div>
+
+          <div className="proposal__after-gallery">
+            <figure className="proposal-after-photo proposal-after-photo--one">
+              <img
+                src="/images/04-pedido/10-depois-do-sim.jpg"
+                alt="Maurício e Brenda juntos depois do pedido"
+              />
+            </figure>
+
+            <figure className="proposal-after-photo proposal-after-photo--two">
+              <img
+                src="/images/04-pedido/11-noivos.jpg"
+                alt="Maurício e Brenda noivos em Gramado"
+              />
+            </figure>
+
+            <figure className="proposal-after-photo proposal-after-photo--three">
+              <img
+                src="/images/04-pedido/12-amor-eterno.jpg"
+                alt="Maurício e Brenda juntos na Fonte do Amor Eterno"
+              />
+            </figure>
+          </div>
+        </div>
+
+        <footer className="proposal__ending">
+          <span>21.02.2025</span>
+
+          <div className="proposal__ending-line" />
+
+          <p>um ano</p>
+
+          <div className="proposal__ending-line" />
+
+          <span>21.02.2026</span>
+
+          <h3>
+            Um ano depois de virar nós,
+            <em>eu te pedi pra ser nós pra sempre.</em>
+          </h3>
+
+          <strong>e você disse sim. ♥</strong>
+
+          <i>↓</i>
         </footer>
       </section>
     </main>
