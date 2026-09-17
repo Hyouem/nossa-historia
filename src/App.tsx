@@ -1,121 +1,128 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+﻿import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const startStory = () => {
+    document
+      .getElementById('inicio')
+      ?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <main>
+      <section className="hero">
+        <div className="hero__glow hero__glow--one" />
+        <div className="hero__glow hero__glow--two" />
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <div className="hero__date">
+          <span>Desde</span>
+          <strong>13.11.2024</strong>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+
+        <div className="hero__layout">
+          <div className="hero__copy">
+            <p className="hero__eyebrow">Maurício + Brenda</p>
+
+            <h1>
+              Nossa história
+              <span>não começou</span>
+              com fogos.
+            </h1>
+
+            <p className="hero__punchline">
+              Mas olha a gente agora.
+              <span>♥</span>
+            </p>
+
+            <div className="hero__details">
+              <span>uma cantada de Harry Potter</span>
+              <i />
+              <span>um café</span>
+              <i />
+              <span>um anime chamado K</span>
+            </div>
+
+            <button onClick={startStory} className="hero__button">
+              <span>Começa aqui</span>
+              <span className="hero__arrow">↓</span>
+            </button>
+          </div>
+
+          <div className="hero__photo-area">
+            <div className="hero__scribble hero__scribble--top">
+              olha esses dois...
+            </div>
+
+            <figure className="hero__photo">
+              <img
+                src="/images/hero.jpg"
+                alt="Maurício e Brenda se beijando sob os fogos"
+              />
+
+              <figcaption>
+                <span>um de muitos</span>
+                <strong>momentos nossos.</strong>
+              </figcaption>
+            </figure>
+
+            <div className="hero__photo-number">01</div>
+
+            <div className="hero__scribble hero__scribble--bottom">
+              ainda bem que eu mandei aquela cantada ↗
+            </div>
+          </div>
+        </div>
+
+        <div className="hero__scroll">
+          <span>rola pra baixo</span>
+          <div />
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section id="inicio" className="beginning">
+        <div className="beginning__rail">
+          <span>01</span>
+          <div />
+          <small>13.11.24</small>
+        </div>
+
+        <div className="beginning__story">
+          <p className="section-label">O começo</p>
+
+          <h2>
+            Tudo por causa
+            <span>de um café.</span>
+          </h2>
+
+          <div className="beginning__text">
+            <p>
+              A gente se conheceu na internet. Eu mandei algumas cantadas
+              de Harry Potter e, de algum jeito, isso funcionou.
+            </p>
+
+            <p>
+              Então veio o café. Você me contou que gostava de um anime
+              chamado <strong>K</strong>. E, por algum acaso absurdo,
+              eu também gostava.
+            </p>
+
+            <p>
+              A gente conversou a noite toda. Você ganhou um beijinho na
+              testa e ainda fechamos a Andradas.
+            </p>
+          </div>
+        </div>
+
+        <aside className="beginning__memory">
+          <span>na minha cabeça naquela noite:</span>
+
+          <blockquote>
+            Daquela noite em diante eu soube que não queria mais ninguém.
+          </blockquote>
+
+          <div className="beginning__heart">♥</div>
+        </aside>
+      </section>
+    </main>
   )
 }
 
