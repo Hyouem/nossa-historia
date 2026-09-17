@@ -1,4 +1,4 @@
-﻿import './App.css'
+import './App.css'
 
 function App() {
   const startStory = () => {
@@ -196,6 +196,186 @@ function App() {
           <span>mas ainda faltava uma coisa...</span>
           <strong>21.02.2025</strong>
           <small>↓</small>
+        </footer>
+      </section>
+
+      <section className="together">
+        <header className="together__intro">
+          <div className="together__chapter">
+            <span>capítulo</span>
+            <strong>02</strong>
+          </div>
+
+          <p className="section-label">21 de fevereiro de 2025</p>
+
+          <h2>
+            E então
+            <span>virou nós.</span>
+          </h2>
+
+          <div className="together__intro-text">
+            <p>
+              Até ali, a gente estava se conhecendo.
+            </p>
+
+            <p>
+              A partir daqui, deixou de ser só você e eu.
+              Tinha começado o nosso <strong>nós.</strong>
+            </p>
+          </div>
+        </header>
+
+        <div className="together__opening">
+          <figure className="memory memory--opening">
+            <img
+              src="/images/02-nos/01-nos.jpg"
+              alt="Maurício e Brenda juntos olhando a cidade"
+            />
+
+            <figcaption>
+              <span>21.02.2025</span>
+              <strong>oficialmente nós.</strong>
+            </figcaption>
+          </figure>
+
+          <div className="together__opening-note">
+            <span>e pensar que tudo começou</span>
+            <strong>com um café...</strong>
+            <i>♥</i>
+          </div>
+        </div>
+
+        <div className="together__manifesto">
+          <span>daí pra frente</span>
+
+          <p>
+            A vida começou a ganhar
+            <em>um monte de versões nossas.</em>
+          </p>
+        </div>
+
+        <div className="memories">
+          <div className="memories__celebration">
+            <figure className="memory memory--celebration">
+              <img
+                src="/images/02-nos/02-celebracao.jpg"
+                alt="Maurício e Brenda comemorando juntos"
+              />
+
+              <figcaption>
+                <span>comemorar</span>
+                <strong>lado a lado.</strong>
+              </figcaption>
+            </figure>
+
+            <p className="memories__scribble memories__scribble--celebration">
+              qualquer motivo fica melhor com você ↗
+            </p>
+          </div>
+
+          <div className="memories__quiet">
+            <figure className="memory memory--quiet">
+              <img
+                src="/images/02-nos/03-casa.jpg"
+                alt="Brenda descansando em um momento tranquilo"
+              />
+            </figure>
+
+            <div className="memories__quiet-copy">
+              <span>também teve isso</span>
+
+              <p>
+                Os momentos que não precisavam ser grandes
+                para virarem memória.
+              </p>
+            </div>
+          </div>
+
+          <div className="memories__pair">
+            <figure className="memory memory--pair-one">
+              <img
+                src="/images/02-nos/04-juntos.jpg"
+                alt="Maurício e Brenda sentados juntos"
+              />
+            </figure>
+
+            <figure className="memory memory--pair-two">
+              <img
+                src="/images/02-nos/05-juntos.jpg"
+                alt="Maurício e Brenda em mais um momento juntos"
+              />
+            </figure>
+
+            <span className="memories__pair-caption">
+              a gente sendo a gente.
+            </span>
+          </div>
+
+          <div className="memories__kiss">
+            <div className="memories__kiss-copy">
+              <span>e eu descobri uma coisa</span>
+
+              <blockquote>
+                Eu gosto muito
+                <em>da vida do teu lado.</em>
+              </blockquote>
+            </div>
+
+            <figure className="memory memory--kiss">
+              <img
+                src="/images/02-nos/06-beijinho.jpg"
+                alt="Maurício dando um beijo em Brenda"
+              />
+
+              <figcaption>
+                <span>e disso aqui também</span>
+                <strong>óbvio.</strong>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="memories__adventure">
+            <figure className="memory memory--adventure">
+              <img
+                src="/images/02-nos/07-aventura.jpg"
+                alt="Maurício e Brenda juntos em uma aventura"
+              />
+            </figure>
+
+            <div className="memories__adventure-copy">
+              <span>lugares novos.</span>
+              <span>histórias novas.</span>
+              <strong>a mesma pessoa.</strong>
+            </div>
+          </div>
+
+          <div className="memories__road">
+            <figure className="memory memory--road">
+              <img
+                src="/images/02-nos/08-estrada.jpg"
+                alt="Maurício e Brenda juntos durante uma viagem"
+              />
+            </figure>
+
+            <div className="memories__road-copy">
+              <span>no caminho,</span>
+
+              <p>
+                em casa, na rua,
+                viajando ou sem fazer absolutamente nada.
+              </p>
+
+              <strong>eu só queria continuar indo com você.</strong>
+            </div>
+          </div>
+        </div>
+
+        <footer className="together__ending">
+          <span>e isso era só o começo.</span>
+
+          <div className="together__ending-line" />
+
+          <strong>↓</strong>
         </footer>
       </section>
     </main>
