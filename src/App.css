@@ -2373,3 +2373,763 @@ button {
     min-height: 55vh;
   }
 }
+
+/* =========================================================
+   CAPÍTULO 04 — NOSSA TRILHA SONORA
+   ========================================================= */
+
+.soundtrack {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding:
+    clamp(8rem, 13vw, 13rem)
+    max(1.2rem, calc((100vw - 1180px) / 2))
+    0;
+  background:
+    radial-gradient(
+      ellipse at 20% 18%,
+      rgba(202, 28, 47, 0.17),
+      transparent 22%
+    ),
+    radial-gradient(
+      ellipse at 82% 30%,
+      rgba(62, 40, 118, 0.18),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #0e0b0c 0%, #090708 100%);
+}
+
+.soundtrack::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 3px,
+      rgba(255, 255, 255, 0.018) 4px
+    );
+}
+
+.soundtrack__lights {
+  position: absolute;
+  top: -200px;
+  left: 10%;
+  right: 10%;
+  height: 750px;
+  pointer-events: none;
+  opacity: 0.55;
+  filter: blur(20px);
+  background:
+    conic-gradient(
+      from 170deg at 18% 0%,
+      transparent,
+      rgba(220, 29, 48, 0.18),
+      transparent 13%
+    ),
+    conic-gradient(
+      from 190deg at 72% 0%,
+      transparent,
+      rgba(168, 28, 53, 0.14),
+      transparent 12%
+    );
+}
+
+.soundtrack__header {
+  position: relative;
+  z-index: 2;
+}
+
+.soundtrack__number {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin-bottom: 5rem;
+  color: rgba(233, 223, 212, 0.28);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.55rem;
+}
+
+.soundtrack__number strong {
+  color: var(--red);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 3.2rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
+.soundtrack__eyebrow {
+  color: rgba(233, 223, 212, 0.38);
+  text-transform: uppercase;
+  letter-spacing: 0.55em;
+  font-size: 0.55rem;
+}
+
+.soundtrack__header h2 {
+  max-width: 900px;
+  margin: 1.5rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(5rem, 10vw, 10rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.075em;
+}
+
+.soundtrack__header h2 span {
+  display: block;
+  color: var(--red);
+  font-style: italic;
+}
+
+.soundtrack__opening {
+  width: min(100%, 510px);
+  margin: 4rem 0 0 auto;
+}
+
+.soundtrack__opening p {
+  margin: 0;
+  color: rgba(233, 223, 212, 0.5);
+  line-height: 1.9;
+}
+
+.soundtrack__opening strong {
+  display: block;
+  margin-top: 1.2rem;
+  color: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.soundtrack__gallery {
+  position: relative;
+  min-height: 1000px;
+  margin-top: 10rem;
+}
+
+.concert-photo {
+  position: absolute;
+  margin: 0;
+  padding: 0.6rem 0.6rem 4.2rem;
+  background: #cfc1b1;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.55);
+}
+
+.concert-photo__image {
+  overflow: hidden;
+  background: #181214;
+}
+
+.concert-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.concert-photo figcaption {
+  position: absolute;
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #241d1e;
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+}
+
+.concert-photo figcaption span {
+  font-size: 0.72rem;
+}
+
+.concert-photo figcaption strong {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.concert-photo--us {
+  left: 0;
+  top: 70px;
+  z-index: 2;
+  width: min(38%, 440px);
+  transform: rotate(-4deg);
+}
+
+.concert-photo--us .concert-photo__image {
+  height: 570px;
+}
+
+.concert-photo--stage {
+  left: 35%;
+  top: 0;
+  width: min(34%, 390px);
+  transform: rotate(1.5deg);
+}
+
+.concert-photo--stage .concert-photo__image {
+  height: 610px;
+}
+
+.concert-photo--night {
+  right: 0;
+  top: 110px;
+  z-index: 3;
+  width: min(34%, 400px);
+  transform: rotate(4deg);
+}
+
+.concert-photo--night .concert-photo__image {
+  height: 550px;
+}
+
+.soundtrack__scribble {
+  position: absolute;
+  right: 3%;
+  bottom: 120px;
+  color: var(--red);
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  font-size: 1rem;
+  line-height: 1.7;
+  transform: rotate(-7deg);
+}
+
+.our-song {
+  position: relative;
+  padding-top: 7rem;
+}
+
+.our-song__intro {
+  text-align: center;
+}
+
+.our-song__intro span {
+  color: rgba(233, 223, 212, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 0.55rem;
+}
+
+.our-song__title {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.our-song__title p {
+  margin: 0 0 2rem;
+  color: rgba(233, 223, 212, 0.42);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.our-song__title h3 {
+  margin: 0;
+  color: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(7rem, 17vw, 15rem);
+  font-weight: 400;
+  line-height: 0.75;
+  letter-spacing: -0.08em;
+}
+
+.our-song__title > span {
+  display: block;
+  margin-top: 2.5rem;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.65em;
+  font-size: 0.58rem;
+}
+
+.music-player {
+  position: relative;
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  width: min(100%, 700px);
+  margin: 7rem auto 0;
+  padding: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 22px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.025)
+    );
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.5),
+    inset 0 1px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.music-player__cover {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      #151214 0 12%,
+      #0a0809 13% 18%,
+      transparent 19%
+    ),
+    repeating-radial-gradient(
+      circle at center,
+      #191719 0,
+      #191719 3px,
+      #0c0b0c 4px,
+      #0c0b0c 6px
+    );
+}
+
+.music-player__cover::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background:
+    linear-gradient(
+      120deg,
+      transparent 35%,
+      rgba(204, 31, 51, 0.45),
+      transparent 65%
+    );
+  transform: rotate(15deg);
+}
+
+.music-player__disc {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.music-player__disc span {
+  position: relative;
+  z-index: 2;
+  color: rgba(233, 223, 212, 0.8);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  letter-spacing: 0.35em;
+}
+
+.music-player--playing .music-player__disc {
+  animation: soundtrack-spin 9s linear infinite;
+}
+
+.music-player__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.8rem 1.2rem 0.8rem 1.6rem;
+}
+
+.music-player__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.music-player__meta div {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-player__meta strong {
+  color: var(--paper);
+  font-size: 1.25rem;
+}
+
+.music-player__meta span {
+  margin-top: 0.35rem;
+  color: rgba(233, 223, 212, 0.45);
+  font-size: 0.8rem;
+}
+
+.music-player__brand {
+  color: var(--paper) !important;
+  font-size: 1.5rem !important;
+}
+
+.music-player__progress {
+  position: relative;
+  height: 3px;
+  margin-top: 2rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.music-player__progress-fill {
+  width: 46%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--paper);
+}
+
+.music-player--playing .music-player__progress-fill {
+  animation: soundtrack-progress 8s linear infinite;
+}
+
+.music-player__times {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.45rem;
+  color: rgba(233, 223, 212, 0.32);
+  font-size: 0.6rem;
+}
+
+.music-player__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.music-player__controls button {
+  border: 0;
+  color: var(--paper);
+  cursor: pointer;
+  background: transparent;
+}
+
+.music-player__secondary {
+  opacity: 0.45;
+  font-size: 1.8rem;
+}
+
+.music-player__play {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 1px solid rgba(233, 223, 212, 0.55) !important;
+  border-radius: 50%;
+  font-size: 1rem;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.music-player__play:hover {
+  transform: scale(1.07);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.music-player__body small {
+  align-self: flex-end;
+  margin-top: 0.8rem;
+  color: var(--red);
+  font-family: 'Segoe Print', 'Bradley Hand', cursive;
+  transform: rotate(-3deg);
+}
+
+.our-song__note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 8rem auto 0;
+  text-align: center;
+}
+
+.our-song__note span {
+  color: rgba(233, 223, 212, 0.35);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.our-song__note strong {
+  margin-top: 0.8rem;
+  color: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.our-song__note i {
+  margin-top: 2rem;
+  color: var(--red);
+  font-size: 1.5rem;
+}
+
+.soundtrack__ending {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.soundtrack__ending span {
+  color: rgba(233, 223, 212, 0.32);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.soundtrack__ending strong {
+  margin-top: 0.5rem;
+  color: var(--paper);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  font-weight: 400;
+}
+
+.soundtrack__ending div {
+  width: 1px;
+  height: 110px;
+  margin: 2rem 0;
+  background: linear-gradient(var(--red), transparent);
+}
+
+.soundtrack__ending b {
+  color: var(--red);
+  font-size: 1.4rem;
+}
+
+@keyframes soundtrack-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes soundtrack-progress {
+  from {
+    width: 46%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .soundtrack {
+    padding-top: 7rem;
+  }
+
+  .soundtrack__header h2 {
+    font-size: clamp(4.2rem, 19vw, 7rem);
+  }
+
+  .soundtrack__opening {
+    margin-left: 0;
+  }
+
+  .soundtrack__gallery {
+    min-height: 1300px;
+    margin-top: 7rem;
+  }
+
+  .concert-photo--us {
+    width: 73%;
+    top: 0;
+  }
+
+  .concert-photo--us .concert-photo__image {
+    height: auto;
+    aspect-ratio: 0.76;
+  }
+
+  .concert-photo--stage {
+    left: auto;
+    right: 0;
+    top: 390px;
+    width: 62%;
+  }
+
+  .concert-photo--stage .concert-photo__image {
+    height: auto;
+    aspect-ratio: 0.67;
+  }
+
+  .concert-photo--night {
+    left: 4%;
+    right: auto;
+    top: 780px;
+    width: 70%;
+  }
+
+  .concert-photo--night .concert-photo__image {
+    height: auto;
+    aspect-ratio: 0.74;
+  }
+
+  .soundtrack__scribble {
+    right: 0;
+    bottom: 10px;
+  }
+
+  .our-song {
+    padding-top: 3rem;
+  }
+
+  .our-song__intro span {
+    letter-spacing: 0.28em;
+  }
+
+  .our-song__title h3 {
+    font-size: clamp(6rem, 31vw, 10rem);
+  }
+
+  .music-player {
+    grid-template-columns: 1fr;
+    width: min(92%, 430px);
+    margin-top: 5rem;
+  }
+
+  .music-player__cover {
+    width: 100%;
+  }
+
+  .music-player__body {
+    padding: 1.5rem 0.7rem 0.6rem;
+  }
+
+  .our-song__note {
+    margin-top: 6rem;
+  }
+
+  .soundtrack__ending {
+    min-height: 60vh;
+  }
+}
+
+/* =========================================================
+   IRIS — PLAYER REAL
+   ========================================================= */
+
+.music-player__cover {
+  isolation: isolate;
+}
+
+.music-player__cover::before {
+  display: none;
+}
+
+.music-player__cover img {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition:
+    transform 700ms ease,
+    filter 700ms ease;
+}
+
+.music-player__cover-glow {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 40px rgba(0, 0, 0, 0.15),
+    inset 0 -30px 50px rgba(0, 0, 0, 0.18);
+}
+
+.music-player--playing .music-player__cover img {
+  transform: scale(1.035);
+  filter: brightness(1.08);
+}
+
+.music-player__progress {
+  overflow: visible;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.music-player__progress::before {
+  content: "";
+  position: absolute;
+  inset: -10px 0;
+}
+
+.music-player__progress-fill {
+  width: 0;
+  transition: width 100ms linear;
+}
+
+.music-player--playing .music-player__progress-fill {
+  animation: none;
+}
+
+.music-player__progress-dot {
+  position: absolute;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: 0 0 12px rgba(233, 223, 212, 0.5);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.music-player__progress:hover .music-player__progress-dot,
+.music-player__progress:focus-visible .music-player__progress-dot {
+  opacity: 1;
+}
+
+.music-player__progress:focus-visible {
+  outline: none;
+}
+
+.music-player__progress:focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: -7px -4px;
+  border: 1px solid rgba(233, 223, 212, 0.35);
+  border-radius: 999px;
+}
+
+.music-player--playing {
+  border-color: rgba(233, 223, 212, 0.16);
+  box-shadow:
+    0 45px 120px rgba(0, 0, 0, 0.58),
+    0 0 80px rgba(177, 25, 43, 0.08),
+    inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.music-player--playing .music-player__play {
+  background: var(--paper);
+  color: #171214;
+  transform: scale(1.04);
+}
+
+.music-player--playing .music-player__play:hover {
+  transform: scale(1.09);
+}
+
+.music-player__secondary {
+  min-width: 42px;
+  min-height: 42px;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.music-player__secondary:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+}

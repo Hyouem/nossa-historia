@@ -1,6 +1,70 @@
+import { useRef, useState } from 'react'
 import './App.css'
 
 function App() {
+  const audioRef = useRef<HTMLAudioElement>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [currentTime, setCurrentTime] = useState(0)
+  const [duration, setDuration] = useState(0)
+
+  const formatTime = (seconds: number) => {
+    if (!Number.isFinite(seconds)) return '0:00'
+
+    const minutes = Math.floor(seconds / 60)
+    const remainingSeconds = Math.floor(seconds % 60)
+
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`
+  }
+
+  const toggleIris = async () => {
+    const audio = audioRef.current
+
+    if (!audio) return
+
+    if (audio.paused) {
+      try {
+        await audio.play()
+      } catch (error) {
+        console.error('Não foi possível reproduzir Iris.', error)
+      }
+    } else {
+      audio.pause()
+    }
+  }
+
+  const seekIris = (event: React.MouseEvent<HTMLDivElement>) => {
+    const audio = audioRef.current
+
+    if (!audio || !duration) return
+
+    const rect = event.currentTarget.getBoundingClientRect()
+    const position = Math.min(
+      Math.max((event.clientX - rect.left) / rect.width, 0),
+      1,
+    )
+
+    audio.currentTime = position * duration
+    setCurrentTime(audio.currentTime)
+  }
+
+  const restartIris = () => {
+    const audio = audioRef.current
+
+    if (!audio) return
+
+    audio.currentTime = 0
+    setCurrentTime(0)
+  }
+
+  const finishIris = () => {
+    const audio = audioRef.current
+
+    if (!audio) return
+
+    audio.currentTime = audio.duration
+    setCurrentTime(audio.duration)
+    setIsPlaying(false)
+  }
   const startStory = () => {
     document
       .getElementById('inicio')
@@ -599,6 +663,265 @@ function App() {
           <div />
 
           <strong>↓</strong>
+        </footer>
+      </section>
+
+      <section className="soundtrack">
+        <div className="soundtrack__lights" />
+
+        <header className="soundtrack__header">
+          <div className="soundtrack__number">
+            <span>capítulo</span>
+            <strong>04</strong>
+          </div>
+
+          <p className="soundtrack__eyebrow">nossa trilha sonora</p>
+
+          <h2>
+            Entre acordes
+            <span>e nós.</span>
+          </h2>
+
+          <div className="soundtrack__opening">
+            <p>
+              Tem dias que tudo que a gente precisa
+              é de uma boa música, um lugar cheio de gente
+              e a sorte de estar do teu lado.
+            </p>
+
+            <strong>
+              No fim, algumas músicas acabam guardando
+              pedaços inteiros da nossa história.
+            </strong>
+          </div>
+        </header>
+
+        <div className="soundtrack__gallery">
+          <figure className="concert-photo concert-photo--us">
+            <div className="concert-photo__image">
+              <img
+                src="/images/04-musica/01-nos-no-show.jpg"
+                alt="Maurício e Brenda juntos no meio de um show"
+              />
+            </div>
+
+            <figcaption>
+              <span>você + eu</span>
+              <strong>+ boa música ♥</strong>
+            </figcaption>
+          </figure>
+
+          <figure className="concert-photo concert-photo--stage">
+            <div className="concert-photo__image">
+              <img
+                src="/images/04-musica/02-palco.jpg"
+                alt="Um dos shows que fizeram parte da história de Maurício e Brenda"
+              />
+            </div>
+
+            <figcaption>
+              <span>alguns momentos</span>
+              <strong>ficam pra sempre.</strong>
+            </figcaption>
+          </figure>
+
+          <figure className="concert-photo concert-photo--night">
+            <div className="concert-photo__image">
+              <img
+                src="/images/04-musica/03-mais-uma-noite.jpg"
+                alt="Maurício e Brenda juntos em mais uma noite de música"
+              />
+            </div>
+
+            <figcaption>
+              <span>mais disso,</span>
+              <strong>por favor. ♥</strong>
+            </figcaption>
+          </figure>
+
+          <p className="soundtrack__scribble">
+            bons shows.<br />
+            melhores companhias.
+          </p>
+        </div>
+
+        <section className="our-song">
+          <div className="our-song__intro">
+            <span>mas no meio de todas as músicas...</span>
+          </div>
+
+          <div className="our-song__title">
+            <p>tem uma que sempre volta pra gente.</p>
+
+            <h3>IRIS</h3>
+
+            <span>GOO GOO DOLLS</span>
+          </div>
+
+          <div
+            className={`music-player ${
+              isPlaying ? 'music-player--playing' : ''
+            }`}
+          >
+            <audio
+              ref={audioRef}
+              src="/media/iris/iris.mp3"
+              preload="metadata"
+              onLoadedMetadata={(event) => {
+                setDuration(event.currentTarget.duration)
+              }}
+              onDurationChange={(event) => {
+                setDuration(event.currentTarget.duration)
+              }}
+              onTimeUpdate={(event) => {
+                setCurrentTime(event.currentTarget.currentTime)
+              }}
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              onEnded={finishIris}
+            />
+
+            <div className="music-player__cover">
+              <img
+                src="/media/iris/cover.jpg"
+                alt="Capa de Iris, Goo Goo Dolls"
+              />
+
+              <div className="music-player__cover-glow" />
+            </div>
+
+            <div className="music-player__body">
+              <div className="music-player__meta">
+                <div>
+                  <strong>Iris</strong>
+                  <span>Goo Goo Dolls</span>
+                </div>
+
+                <span
+                  className="music-player__brand"
+                  aria-hidden="true"
+                >
+                  ♫
+                </span>
+              </div>
+
+              <div
+                className="music-player__progress"
+                role="slider"
+                tabIndex={0}
+                aria-label="Progresso de Iris"
+                aria-valuemin={0}
+                aria-valuemax={Math.round(duration || 0)}
+                aria-valuenow={Math.round(currentTime)}
+                onClick={seekIris}
+                onKeyDown={(event) => {
+                  const audio = audioRef.current
+
+                  if (!audio) return
+
+                  if (event.key === 'ArrowRight') {
+                    audio.currentTime = Math.min(
+                      audio.currentTime + 5,
+                      duration,
+                    )
+                  }
+
+                  if (event.key === 'ArrowLeft') {
+                    audio.currentTime = Math.max(
+                      audio.currentTime - 5,
+                      0,
+                    )
+                  }
+                }}
+              >
+                <div
+                  className="music-player__progress-fill"
+                  style={{
+                    width: duration
+                      ? `${(currentTime / duration) * 100}%`
+                      : '0%',
+                  }}
+                />
+
+                <span
+                  className="music-player__progress-dot"
+                  style={{
+                    left: duration
+                      ? `${(currentTime / duration) * 100}%`
+                      : '0%',
+                  }}
+                />
+              </div>
+
+              <div className="music-player__times">
+                <span>{formatTime(currentTime)}</span>
+                <span>{formatTime(duration)}</span>
+              </div>
+
+              <div className="music-player__controls">
+                <button
+                  className="music-player__secondary"
+                  type="button"
+                  aria-label="Voltar ao início"
+                  onClick={restartIris}
+                >
+                  ‹
+                </button>
+
+                <button
+                  className="music-player__play"
+                  type="button"
+                  aria-label={
+                    isPlaying
+                      ? 'Pausar Iris'
+                      : 'Tocar Iris'
+                  }
+                  onClick={toggleIris}
+                >
+                  {isPlaying ? 'Ⅱ' : '▶'}
+                </button>
+
+                <button
+                  className="music-player__secondary"
+                  type="button"
+                  aria-label="Avançar cinco segundos"
+                  onClick={() => {
+                    const audio = audioRef.current
+
+                    if (!audio) return
+
+                    audio.currentTime = Math.min(
+                      audio.currentTime + 5,
+                      duration,
+                    )
+                  }}
+                >
+                  ›
+                </button>
+              </div>
+
+              <small>
+                nossa música ♥
+              </small>
+            </div>
+          </div>
+          <div className="our-song__note">
+            <span>não é só uma música.</span>
+
+            <strong>
+              É uma daquelas coisas que,
+              de algum jeito, virou nossa.
+            </strong>
+
+            <i>♥</i>
+          </div>
+        </section>
+
+        <footer className="soundtrack__ending">
+          <span>as músicas também contam a nossa história.</span>
+          <strong>e essa ainda está tocando.</strong>
+          <div />
+          <b>↓</b>
         </footer>
       </section>
     </main>
